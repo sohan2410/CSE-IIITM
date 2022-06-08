@@ -1,0 +1,21 @@
+.appBar {
+  background-color: rgba(19, 24, 33, 1);
+  height: 5vh;
+  padding: 2rem 4rem 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstBox {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+}
+.secondBox {
+  display: flex;
+  justify-content: space-between;
+}
+.thirdBox {
+  display: flex;
+  justify-content: flex-end;
+}
