@@ -23,7 +23,9 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import DoneIcon from "@mui/icons-material/Done";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import classes from "./../styles/Home.module.css";
 export default function layout(title, description, children) {
   let imgData = [
@@ -123,8 +125,173 @@ export default function layout(title, description, children) {
             </Grid>
           </Grid>
         </Container>
+        <Container className={classes.section2}>
+          <Typography
+            variant="h3"
+            padding="1rem"
+            fontFamily="'Abel', sans-serif"
+          >
+            Compare to competitors
+          </Typography>
+          <List className={classes.section2List}>
+            <ListItem className={classes.section2_listItem1}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Product
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Competitor
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Another one
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Mabel
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem2}>
+              {" "}
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Velit
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  2%Free
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  1%Free
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  No Free
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem1}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Developer experience
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Sucks
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Decent
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  Impeccable
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem2}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Egestas
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem1}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Sit
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <HorizontalRuleIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem2}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Velit
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <HorizontalRuleIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <HorizontalRuleIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+              </Grid>
+            </ListItem>
+            <ListItem className={classes.section2_listItem1}>
+              <Grid container spacing={0}>
+                <Grid item xs={3} className={classes.sec2GridT1}>
+                  Amet
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <HorizontalRuleIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <HorizontalRuleIcon />
+                </Grid>
+                <Grid item xs={3} className={classes.sec2GridT2}>
+                  <DoneIcon />
+                </Grid>
+              </Grid>
+            </ListItem>
+          </List>
+        </Container>
       </div>
       <footer className={classes.footer}>
+        <Grid className={classes.footerGridCon} container spacing={2}>
+          <Grid item xs={4} className={classes.footerGridItem}>
+            <List className={classes.footerList1}>
+              <Container>Logo</Container>
+              <Typography>
+                With name. simply visit a URL. drop a comment and you're done.
+                No more wading through unclear. unactionable feedback.
+              </Typography>
+            </List>
+          </Grid>
+          <Grid container xs={8} className={classes.footerGridCon}>
+            <Grid item xs={3} className={classes.footerGridItem}>
+              <List>
+                <ListItem>Landing Pages</ListItem>
+                <ListItem>Page 1</ListItem>
+                <ListItem>Page 2</ListItem>
+                <ListItem>Page 3</ListItem>
+                <ListItem>Page 4</ListItem>
+              </List>
+            </Grid>
+            <Grid item xs={3} className={classes.footerGridItem}>
+              <List>
+                <ListItem>Conpany Pages</ListItem>
+                <ListItem>About us</ListItem>
+                <ListItem>Blog</ListItem>
+                <ListItem>Careers</ListItem>
+                <ListItem>Help Center</ListItem>
+              </List>
+            </Grid>
+            <Grid item xs={3} className={classes.footerGridItem}>
+              <List>
+                <ListItem>Other Pages</ListItem>
+                <ListItem>Contact</ListItem>
+                <ListItem>Sign up</ListItem>
+                <ListItem>Sign in</ListItem>
+                <ListItem>Licensing</ListItem>
+              </List>
+            </Grid>
+          </Grid>
+        </Grid>
+        <hr />
         <Typography>All rights reserved.</Typography>
       </footer>
     </div>

@@ -64,3 +64,40 @@
   margin-left: 3rem;
   //   padding-top: 1rem;
 }
+// section 2
+.section2 {
+  background-color: white;
+  min-height: 80vh;
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &List {
+    width: 100%;
+    padding: 1rem;
+    // background-color: red;
+  }
+  &_listItem1 {
+    background-color: rgb(245, 247, 249);
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    // display: flex;
+    // justify-content: center;
+  }
+  &_listItem2 {
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+  }
+}
+.sec2 {
+  &GridT1 {
+    // background-color: green;
+  }
+  &GridT2 {
+    // background-color: green;
+    text-align: center;
+  }
+}

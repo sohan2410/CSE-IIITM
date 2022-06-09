@@ -1,5 +1,5 @@
 .box {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(13, 22, 33, 1);
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 .main {
   // background-color: aqua;
   min-height: 80vh;
-  padding: 10rem 2rem 10rem 5rem;
+  padding: 5rem 2rem 10rem 5rem;
   color: white;
   display: flex;
   justify-content: center;

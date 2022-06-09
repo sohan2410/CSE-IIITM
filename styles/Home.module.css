@@ -1,12 +1,12 @@
 .box {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0d1621;
   display: flex;
   flex-direction: column; }
 
 .main {
   min-height: 80vh;
-  padding: 10rem 2rem 10rem 5rem;
+  padding: 5rem 2rem 10rem 5rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -33,10 +33,18 @@
   justify-content: flex-end; }
 
 .footer {
-  background-color: #131621;
+  background-color: #1e1f24;
   color: white;
   text-align: center;
   padding: 2rem; }
+
+.footerGridCon {
+  display: flex;
+  justify-content: center; }
+
+.footerList1 {
+  text-align: start;
+  padding-left: 8.5rem; }
 
 .imageBox {
   height: 100%;
@@ -93,3 +101,27 @@
   align-items: center;
   padding-left: 4rem;
   margin-left: 3rem; }
+
+.section2 {
+  background-color: white;
+  min-height: 80vh;
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .section2List {
+    width: 100%;
+    padding: 1rem; }
+  .section2_listItem1 {
+    background-color: #f5f7f9;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold; }
+  .section2_listItem2 {
+    background-color: white;
+    width: 100%;
+    font-weight: bold; }
+
+.sec2GridT2 {
+  text-align: center; }
