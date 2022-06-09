@@ -1,11 +1,16 @@
 .box {
-  height: 95vh;
+  height: 100vh;
   background-color: #0d1621;
   display: flex;
   flex-direction: column; }
 
-.container {
-  padding: 2rem; }
+.main {
+  min-height: 80vh;
+  padding: 10rem 2rem 10rem 5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .appBar {
   background-color: #131821;
@@ -32,3 +37,59 @@
   color: white;
   text-align: center;
   padding: 2rem; }
+
+.imageBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.mainBox {
+  background-color: #ff7300;
+  height: 100%;
+  width: 100%; }
+
+.btn_main {
+  background-color: rgba(117, 5, 227, 0.6);
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-size: smaller; }
+  .btn_main:hover {
+    background-color: #7505e3;
+    transform: translate(0, -1.5px); }
+
+.typical {
+  margin: 0rem;
+  display: inline; }
+
+.inputCon {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem; }
+
+.inputBox {
+  background-color: #444c5e;
+  color: white;
+  padding: 0.5rem;
+  width: 50%;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-left: -1rem;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+.preSpan {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  padding-left: 2rem; }
+
+.postSpan {
+  color: #7505e3; }
+
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+  margin-left: 3rem; }

@@ -1,0 +1,66 @@
+.imageBox {
+  //   background-color: aqua;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainBox {
+  background-color: rgb(255, 115, 0);
+  height: 100%;
+  width: 100%;
+}
+.contentBox {
+  //   background-color: green;
+}
+.btn_main {
+  background-color: rgba(117, 5, 227, $alpha: 0.6);
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-size: smaller;
+  &:hover {
+    background-color: rgba(117, 5, 227, $alpha: 1);
+    transform: translate(0, -1.5px);
+  }
+}
+.typical {
+  margin: 0rem;
+  display: inline;
+}
+.inputCon {
+  //   background-color: green;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+.inputBox {
+  background-color: rgb(68, 76, 94);
+  color: white;
+  padding: 0.5rem;
+  width: 50%;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-left: -1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.preSpan {
+  //   background-color: greenyellow;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+.postSpan {
+  color: rgba(117, 5, 227, 1);
+}
+.carousel {
+  //   background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+  margin-left: 3rem;
+  //   padding-top: 1rem;
+}
