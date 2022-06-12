@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import Head from "next/head";
+import { useState } from "react";
 import Image from "next/image";
 import Image1 from "./../assets/image1.jpg";
 import Image2 from "./../assets/image2.jpg";
 import Image3 from "./../assets/image3.jpg";
 import Image4 from "./../assets/image4.jpg";
 import Image5 from "./../assets/image5.jpg";
-
 import Typical from "react-typical";
+import { Divider, Drawer } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 import Carousel from "react-material-ui-carousel";
 
-// import CarsouselSlider from "react-carousel-slider";
 import {
   AppBar,
   Box,
   Button,
+  Checkbox,
   Container,
   Grid,
   Input,
@@ -28,16 +31,14 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import classes from "./../styles/Home.module.css";
 export default function layout(title, description, children) {
-  let imgData = [
-    {
-      des: "1",
-      imgSrc: { Image1 },
-    },
-    {
-      des: "2",
-      imgSrc: { Image2 },
-    },
-  ];
+  const [sidbarVisible, setSidebarVisible] = useState(false);
+  const sidebarOpenHandler = () => {
+    setSidebarVisible(true);
+  };
+  const sidebarCloseHandler = () => {
+    setSidebarVisible(false);
+  };
+
   return (
     <div>
       <Head>
@@ -55,8 +56,40 @@ export default function layout(title, description, children) {
         <AppBar position="static" className={classes.appBar}>
           <Grid container spacing={3} justifyContent="center">
             <Grid item xs={4} display="flex">
-              <MenuIcon />
+              <IconButton
+                edge="start"
+                aria-label="open drawer"
+                onClick={sidebarOpenHandler}
+                className={classes.menuButton}
+              >
+                <MenuIcon
+                  onClick={sidebarOpenHandler}
+                  className={classes.navbarButton}
+                />
+              </IconButton>
               <div className={classes.firstBox}>Logo</div>
+              <Drawer
+                anchor="left"
+                open={sidbarVisible}
+                onClose={sidebarCloseHandler}
+              >
+                <List>
+                  <ListItem>
+                    <Container
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="space-between"
+                    >
+                      <Typography>Shortcut to progress</Typography>
+                      <IconButton
+                        aria-label="close"
+                        onClick={sidebarCloseHandler}
+                      ></IconButton>
+                    </Container>
+                  </ListItem>
+                  <Divider light />
+                </List>
+              </Drawer>
             </Grid>
             <Grid item xs={4} spacing={3}>
               <div className={classes.secondBox}>
@@ -248,6 +281,64 @@ export default function layout(title, description, children) {
               </Grid>
             </ListItem>
           </List>
+        </Container>
+        <Container className={classes.section3}>
+          <Grid container spacing={2}>
+            <Grid item xs={5} className={classes.section3_left}>
+              <Typography
+                variant="h3"
+                className={classes.section3_left_heading}
+              >
+                Sign up now and get a free 3 month trial
+              </Typography>
+              <Typography className={classes.section3_left_para}>
+                With paige, simply visit URL, drop a comment and you're done. No
+                more wading through unclear, unactionable feedback.
+              </Typography>
+              <Button color="inherit" className={classes.section3_left_btn}>
+                Schedule a call
+              </Button>
+              <Typography className={classes.section3_left_statement}>
+                "if you aren't sure, always go fot paige. I didn't even need
+                training."
+              </Typography>
+              <Typography className={classes.section3_left_statement2}>
+                <span className={classes.section3_left_span}>Rated 5/5</span> -
+                from 32 reviews
+              </Typography>
+            </Grid>
+            <Grid item xs={4} className={classes.section3_right}>
+              <Container className={classes.section3_right_con}>
+                <Typography
+                  className={classes.section3_right_heading}
+                  variant="h5"
+                >
+                  Sign up for free
+                </Typography>
+                <Container className={classes.section3_right_title_con}>
+                  <Typography className={classes.section3_right_title}>
+                    Name
+                  </Typography>
+                  <Input className={classes.section3_right_input} />
+                </Container>
+                <Container className={classes.section3_right_title_con}>
+                  <Typography className={classes.section3_right_title}>
+                    Email
+                  </Typography>
+                  <Input className={classes.section3_right_input} />
+                </Container>
+                <Typography className={classes.section3_right_statement}>
+                  <Checkbox className={classes.checkbox} /> I agree to the
+                  privacy policy.
+                </Typography>
+                <Button className={classes.section3_right_btn}>Submit</Button>
+                <Typography className={classes.section3_right_statement2}>
+                  Already have an account?{" "}
+                  <span className={classes.section3_right_span}>Sign in</span>
+                </Typography>
+              </Container>
+            </Grid>
+          </Grid>
         </Container>
       </div>
       <footer className={classes.footer}>

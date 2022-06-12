@@ -101,3 +101,110 @@
     text-align: center;
   }
 }
+
+//section 3
+.section3 {
+  background-color: white;
+  min-height: 80vh;
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+
+  &_left {
+    // background-color: aquamarine;
+    margin: 2rem 2rem 2rem 5rem;
+    padding: 5rem 5rem 0rem 0rem;
+    &_heading {
+      // background-color: aqua;
+      font-size: 3rem;
+    }
+    &_para {
+      // background-color: greenyellow;
+      font-size: 1.1rem;
+      padding: 1rem 0rem;
+    }
+    &_btn {
+      background-color: rgb(117, 5, 227);
+      color: white;
+      font-size: 0.6rem;
+      padding: 0.6rem 1rem;
+      &:hover {
+        background-color: rgba(117, 5, 227, 0.7);
+      }
+    }
+    &_statement {
+      margin-top: 3rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 1.2rem;
+      &2 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+    }
+    &_span {
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+  }
+  &_right {
+    // background-color: aqua;
+    margin: 2rem 2rem 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_con {
+      background-color: rgb(18, 24, 33);
+      color: white;
+      padding: 2rem 2rem;
+      min-height: 50%;
+      border-radius: 5px;
+    }
+    &_heading {
+      margin: 1rem 0rem;
+    }
+    &_title {
+      margin: 0;
+      font-size: 0.8rem;
+      &_con {
+        margin: 1rem 0rem 0rem -1.5rem;
+      }
+    }
+    &_input {
+      border-bottom: 2px solid white;
+      width: 100%;
+      font-size: 0.8rem;
+      color: white;
+    }
+    &_statement {
+      // width: 100%;
+      // text-align: center;
+      margin: 0.5rem 0rem 0.5rem -0.8rem;
+      font-size: 0.8rem;
+    }
+    &_btn {
+      width: 100%;
+      background-color: rgb(68, 76, 94);
+      color: white;
+      font-size: 0.8rem;
+      padding: 0.5rem 0rem;
+      margin: 1rem 0rem 1rem 0rem;
+    }
+    &_statement2 {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    &_span {
+      color: rgb(117, 5, 227);
+      padding: 0rem 0rem 2rem 0rem;
+    }
+  }
+}
+.checkbox {
+  color: white;
+}
