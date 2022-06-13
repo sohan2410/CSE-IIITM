@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
@@ -9,7 +10,7 @@ import Image3 from "./../assets/image3.jpg";
 import Image4 from "./../assets/image4.jpg";
 import Image5 from "./../assets/image5.jpg";
 import Typical from "react-typical";
-import { Divider, Drawer } from "@mui/material";
+import { Divider, Drawer, Link } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Carousel from "react-material-ui-carousel";
 
@@ -38,7 +39,7 @@ export default function layout(title, description, children) {
   const sidebarCloseHandler = () => {
     setSidebarVisible(false);
   };
-
+  const router = useRouter();
   return (
     <div>
       <Head>
@@ -88,19 +89,47 @@ export default function layout(title, description, children) {
                     </Container>
                   </ListItem>
                   <Divider light />
+                  <ListItem>
+                    <Button onClick={() => router.push("/")}>Home</Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button onClick={() => router.push("/about")}>About</Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button onClick={() => router.push("/feedback")}>
+                      Feedback
+                    </Button>
+                  </ListItem>
                 </List>
               </Drawer>
             </Grid>
             <Grid item xs={4} spacing={3}>
               <div className={classes.secondBox}>
-                <Typography>Home</Typography>
-                <Typography>About</Typography>
-                <Typography>Feedback</Typography>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/")}
+                >
+                  Home
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/about")}
+                >
+                  About
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/feedback")}
+                >
+                  Feedback
+                </Typography>
               </div>
             </Grid>
             <Grid item xs={4} justifyContent="flex-end">
               <div className={classes.thirdBox}>
-                <Button color="inherit">Login</Button>
+                <Button onClick={() => router.push("/signin")} color="inherit">
+                  Login
+                </Button>
               </div>
             </Grid>
           </Grid>
@@ -108,11 +137,12 @@ export default function layout(title, description, children) {
         <Container className={classes.main}>
           {/* <Typography variant="h3">Popular Products</Typography> */}
           <Grid container spacing={3}>
-            <Grid item xs={6} className={classes.contentBox}>
+            <Grid item md={6} className={classes.contentBox}>
               <Typography
                 variant="h2"
                 fontFamily="'Abel', sans-serif;"
                 margin="2rem"
+                className={classes.contentBox_heading}
               >
                 Be ready to share your best{" "}
                 <Typical
@@ -125,6 +155,7 @@ export default function layout(title, description, children) {
               <Typography
                 margin="0rem 2rem 1rem 2rem"
                 color="rgb(179, 193, 199)"
+                className={classes.contentBox_statement}
               >
                 Every update that you can share with your users, you should.
                 They will love for this, we promise.
@@ -134,16 +165,25 @@ export default function layout(title, description, children) {
                   placeholder="Enter your email . . ."
                   className={classes.inputBox}
                 />
-                <Button color="inherit" className={classes.btn_main}>
+                <Button
+                  color="inherit"
+                  className={classes.btn_main}
+                  onClick={() => router.push("/signin")}
+                >
                   Start learning
                 </Button>
               </Container>
               <Typography className={classes.preSpan}>
                 💜 By signing up you agree to{" "}
-                <span className={classes.postSpan}>Privacy policy</span>
+                <span
+                  className={classes.postSpan}
+                  onClick={() => router.push("/policy")}
+                >
+                  Privacy policy
+                </span>
               </Typography>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} className={classes.carousel_con}>
               <div className={classes.imageBox}>
                 {/* <CarsouselSlider slideItem={imgData} /> */}
                 <Carousel className={classes.carousel}>
@@ -163,6 +203,7 @@ export default function layout(title, description, children) {
             variant="h3"
             padding="1rem"
             fontFamily="'Abel', sans-serif"
+            className={classes.section2_heading}
           >
             Compare to competitors
           </Typography>
@@ -284,7 +325,7 @@ export default function layout(title, description, children) {
         </Container>
         <Container className={classes.section3}>
           <Grid container spacing={2}>
-            <Grid item xs={5} className={classes.section3_left}>
+            <Grid item sm={5} className={classes.section3_left}>
               <Typography
                 variant="h3"
                 className={classes.section3_left_heading}
@@ -307,7 +348,7 @@ export default function layout(title, description, children) {
                 from 32 reviews
               </Typography>
             </Grid>
-            <Grid item xs={4} className={classes.section3_right}>
+            <Grid item sm={4} className={classes.section3_right}>
               <Container className={classes.section3_right_con}>
                 <Typography
                   className={classes.section3_right_heading}
@@ -331,10 +372,20 @@ export default function layout(title, description, children) {
                   <Checkbox className={classes.checkbox} /> I agree to the
                   privacy policy.
                 </Typography>
-                <Button className={classes.section3_right_btn}>Submit</Button>
+                <Button
+                  className={classes.section3_right_btn}
+                  onClick={() => router.push("/")}
+                >
+                  Submit
+                </Button>
                 <Typography className={classes.section3_right_statement2}>
                   Already have an account?{" "}
-                  <span className={classes.section3_right_span}>Sign in</span>
+                  <span
+                    className={classes.section3_right_span}
+                    onClick={() => router.push("/signin")}
+                  >
+                    Sign in
+                  </span>
                 </Typography>
               </Container>
             </Grid>
@@ -343,41 +394,65 @@ export default function layout(title, description, children) {
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
-          <Grid item xs={4} className={classes.footerGridItem}>
+          <Grid item sm={4} className={classes.footerGridItem}>
             <List className={classes.footerList1}>
-              <Container>Logo</Container>
-              <Typography>
+              <Container className={classes.footer_logo}>Logo</Container>
+              <Typography className={classes.footer_statement}>
                 With name. simply visit a URL. drop a comment and you're done.
                 No more wading through unclear. unactionable feedback.
               </Typography>
             </List>
           </Grid>
-          <Grid container xs={8} className={classes.footerGridCon}>
-            <Grid item xs={3} className={classes.footerGridItem}>
+          <Grid container sm={8} className={classes.footerGridCon}>
+            <Grid item sm={3}>
               <List>
                 <ListItem>Landing Pages</ListItem>
-                <ListItem>Page 1</ListItem>
-                <ListItem>Page 2</ListItem>
-                <ListItem>Page 3</ListItem>
-                <ListItem>Page 4</ListItem>
+                <ListItem className={classes.footerGridItem2}>Page 1</ListItem>
+                <ListItem className={classes.footerGridItem2}>Page 2</ListItem>
+                <ListItem className={classes.footerGridItem2}>Page 3</ListItem>
+                <ListItem className={classes.footerGridItem2}>Page 4</ListItem>
               </List>
             </Grid>
-            <Grid item xs={3} className={classes.footerGridItem}>
+            <Grid item xs={3} className={classes.footerGridItem2}>
               <List>
                 <ListItem>Conpany Pages</ListItem>
-                <ListItem>About us</ListItem>
-                <ListItem>Blog</ListItem>
-                <ListItem>Careers</ListItem>
-                <ListItem>Help Center</ListItem>
+                <ListItem className={classes.footerGridItem2}>
+                  About us
+                </ListItem>
+                <ListItem className={classes.footerGridItem2}>Blog</ListItem>
+                <ListItem className={classes.footerGridItem2}>Careers</ListItem>
+                <ListItem className={classes.footerGridItem2}>
+                  Help Center
+                </ListItem>
               </List>
             </Grid>
-            <Grid item xs={3} className={classes.footerGridItem}>
+            <Grid item xs={3} className={classes.footerGridItem2}>
               <List>
                 <ListItem>Other Pages</ListItem>
-                <ListItem>Contact</ListItem>
-                <ListItem>Sign up</ListItem>
-                <ListItem>Sign in</ListItem>
-                <ListItem>Licensing</ListItem>
+                <ListItem
+                  className={classes.footerGridItem2}
+                  onClick={() => router.push("/contact")}
+                >
+                  contact
+                </ListItem>
+                <ListItem
+                  className={classes.footerGridItem2}
+                  onClick={() => router.push("/signup")}
+                >
+                  Sign up
+                </ListItem>
+                <ListItem
+                  className={classes.footerGridItem2}
+                  onClick={() => router.push("/signin")}
+                >
+                  Sign in
+                </ListItem>
+                <ListItem
+                  className={classes.footerGridItem2}
+                  onClick={() => router.push("/policy")}
+                >
+                  Licensing
+                </ListItem>
               </List>
             </Grid>
           </Grid>

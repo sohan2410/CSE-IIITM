@@ -15,4 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond(tab-port) {
+    // padding: 1rem 2rem 1rem 1rem;
+    // font-size: 3rem;
+    padding: 2rem 1rem 2rem 1rem;
+  }
 }

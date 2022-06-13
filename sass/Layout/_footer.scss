@@ -3,16 +3,42 @@
   color: white;
   text-align: center;
   padding: 2rem;
+  @include respond(phone) {
+    padding: 0.5rem;
+
+    // font-size: 1.5rem;
+  }
+  &_logo {
+    @include respond(tab-land) {
+      font-size: 1rem;
+      // font-size: 1.5rem;
+    }
+  }
+  &_statement {
+    @include respond(tab-land) {
+      font-size: 0.8rem;
+      // font-size: 1.5rem;
+    }
+  }
 }
 .footerGridCon {
   // background-color: bisque;
   display: flex;
   justify-content: center;
+  @include respond(tab-port) {
+    display: none;
+    // font-size: 1.5rem;
+  }
 }
-.footerGridItem {
+.footerGridItem2 {
   // background-color: aqua;
+  cursor: pointer;
 }
 .footerList1 {
   text-align: start;
   padding-left: 8.5rem;
+  @include respond(phone) {
+    padding: 4rem;
+    // font-size: 1.5rem;
+  }
 }
