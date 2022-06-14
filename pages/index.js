@@ -79,7 +79,14 @@ export default function Home(props) {
             <Grid item xs={6} className={classes.carousel_con}>
               <div className={classes.imageBox}>
                 {/* <CarsouselSlider slideItem={imgData} /> */}
-                <Carousel className={classes.carousel}>
+                <Carousel
+                  // controls={false}
+                  // indicators={false}
+                  className={classes.carousel}
+                  NextIcon={false}
+                  PrevIcon={false}
+                  // nextLabel={false}
+                >
                   <Image src={Image1} width="400%" height="400%" />
                   <Image src={Image2} width="400%" height="400%" />
                   <Image src={Image3} width="400%" height="400%" />
