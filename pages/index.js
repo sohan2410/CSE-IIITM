@@ -37,23 +37,27 @@ export default function Home(props) {
                 margin="2rem"
                 className={classes.contentBox_heading}
               >
-                Be ready to share your best{" "}
+                {/* Be ready to share your best{" "}
                 <Typical
                   className={classes.typical}
                   loop={Infinity}
                   steps={["Click", 2000, "Snap", 2000, "Moments", 2000]}
-                />
+                /> */}
+                Computer Science and Engineering
               </Typography>
 
               <Typography
                 margin="0rem 2rem 1rem 2rem"
-                color="rgb(179, 193, 199)"
+                color="#707475"
                 className={classes.contentBox_statement}
               >
-                Every update that you can share with your users, you should.
-                They will love for this, we promise.
+                {/* Every update that you can share with your users, you should.
+                They will love for this, we promise. */}
+                The Institute has been educating India’s computing professionals for the past two decades as various academic programs have been offered from its inception. The undergraduate programme in Computer Science and Engineering was started in 2017. Following the creation of departments in the Institute, the department of Computer Science and Engineering was established in August 2022. Along with the UG programme, the department offers a postgraduate programme in the field of Information Security. The students are encouraged to carry out projects in niche areas including Information Systems, Computer Vision, Computer Networks and Software Engineering, as well as specializations in emerging areas of importance such as cloud computing, artificial intelligence, blockchain, machine learning and data analytics.
+                The department has a mix of young and experienced senior faculty members specializing in a wide spectrum of research and teaching areas. The department is in the process of developing state-of-the-art laboratories to cater to the needs of the curriculum. Although at its nascent stage, the department is rapidly evolving to both industrial and academic requirements. Consequently, the department attracts brilliant students who are industry-ready at the end of their respective programmes.
+
               </Typography>
-              <Container className={classes.inputCon}>
+              {/* <Container className={classes.inputCon}>
                 <Input
                   placeholder="Enter your email . . ."
                   className={classes.inputBox}
@@ -65,8 +69,8 @@ export default function Home(props) {
                 >
                   Start learning
                 </Button>
-              </Container>
-              <Typography className={classes.preSpan}>
+              </Container> */}
+              {/* <Typography className={classes.preSpan}>
                 💜 By signing up you agree to{" "}
                 <span
                   className={classes.postSpan}
@@ -74,18 +78,58 @@ export default function Home(props) {
                 >
                   Privacy policy
                 </span>
+              </Typography> */}
+              <Typography
+                variant="h5"
+                fontFamily="'Abel', sans-serif;"
+                className={classes.contentBox_heading}
+              >
+                Vision
+              </Typography>
+              <Typography
+                margin="0rem 2rem 1rem 2rem"
+                color="#707475"
+                className={classes.contentBox_statement}
+              >
+                {/* Every update that you can share with your users, you should.
+                They will love for this, we promise. */}
+                <Typography
+                  margin="0rem 2rem 1rem 2rem"
+                  color="#707475"
+                  className={classes.contentBox_statement}
+                >
+                  The Institute has been educating India’s computing professionals for the past two decades as various academic programs have been offered from its inception. The undergraduate programme in Computer Science and Engineering was started in 2017. Following the creation of departments in the Institute, the department of Computer Science and Engineering was established in August 2022. Along with the UG programme, the department offers a postgraduate programme in the field of Information Security. The students are encouraged to carry out projects in niche areas including Information Systems, Computer Vision, Computer Networks and Software Engineering, as well as specializations in emerging areas of importance such as cloud computing, artificial intelligence, blockchain, machine learning and data analytics.
+                  The department has a mix of young and experienced senior faculty members specializing in a wide spectrum of research and teaching areas. The department is in the process of developing state-of-the-art laboratories to cater to the needs of the curriculum. Although at its nascent stage, the department is rapidly evolving to both industrial and academic requirements. Consequently, the department attracts brilliant students who are industry-ready at the end of their respective programmes.
+                </Typography>
+              </Typography>
+              <Typography
+                variant="h5"
+                fontFamily="'Abel', sans-serif;"
+                className={classes.contentBox_heading}
+              >
+                Mission
+              </Typography>
+              <Typography
+                margin="0rem 2rem 1rem 2rem"
+                color="#707475"
+                className={classes.contentBox_statement}
+              >
+                • To provide in-depth knowledge through effective pedagogies and practical exposure using the latest tools and technologies in the discipline of computer science and engineering.
+                • To advance academics by performing state-of-the-art research and providing industry-oriented undergraduate and postgraduate programs in the discipline of computer science and engineering.
+                • To nourish and imbibe human values and excellence, equipping young minds to utilize their creativity and passion in serving the global community’s needs.
+
               </Typography>
             </Grid>
             <Grid item xs={6} className={classes.carousel_con}>
               <div className={classes.imageBox}>
                 {/* <CarsouselSlider slideItem={imgData} /> */}
-                <Carousel
+                {/* <Carousel
                   // controls={false}
                   // indicators={false}
                   className={classes.carousel}
                   NextIcon={false}
                   PrevIcon={false}
-                  // nextLabel={false}
+                // nextLabel={false}
                 >
                   <Image src={Image1} width="400%" height="400%" />
                   <Image src={Image2} width="400%" height="400%" />
@@ -93,7 +137,12 @@ export default function Home(props) {
                   <Image src={Image4} width="400%" height="400%" />
                   <Image src={Image5} width="400%" height="400%" />
                   <Image src={Image3} width="400%" height="400%" />
-                </Carousel>
+                </Carousel> */}
+                <Typography
+               variant="h3"
+              >
+               News Section
+              </Typography>
               </div>
             </Grid>
           </Grid>

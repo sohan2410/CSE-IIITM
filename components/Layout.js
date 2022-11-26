@@ -83,17 +83,22 @@ export default function layout({ title, description, children }) {
                     <Button onClick={() => router.push("/")}>Home</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/about")}>About</Button>
+                    <Button onClick={() => router.push("/about")}>People</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/feedback")}>
-                      Feedback
-                    </Button>
+                    <Button onClick={() => router.push("/about")}>Research</Button>
                   </ListItem>
+                  <ListItem>
+                    <Button onClick={() => router.push("/about")}>Programs</Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button onClick={() => router.push("/about")}>Events</Button>
+                  </ListItem>
+                  
                 </List>
               </Drawer>
             </Grid>
-            <Grid item xs={4} spacing={3}>
+            <Grid item xs={8} spacing={3}>
               <div className={classes.secondBox}>
                 <Typography
                   className={classes.secondBox_menu}
@@ -105,23 +110,35 @@ export default function layout({ title, description, children }) {
                   className={classes.secondBox_menu}
                   onClick={() => router.push("/about")}
                 >
-                  About
+                  People
                 </Typography>
                 <Typography
                   className={classes.secondBox_menu}
                   onClick={() => router.push("/feedback")}
                 >
-                  Feedback
+                  Research
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/feedback")}
+                >
+                  Programs
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/feedback")}
+                >
+                  Events
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={4} justifyContent="flex-end">
+            {/* <Grid item xs={4} justifyContent="flex-end">
               <div className={classes.thirdBox}>
                 <Button onClick={() => router.push("/signin")} color="inherit">
                   Login
                 </Button>
               </div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </AppBar>
         {children}

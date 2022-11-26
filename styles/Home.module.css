@@ -1,13 +1,13 @@
 .box {
   min-height: 100vh;
-  background-color: #0d1621;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column; }
 
 .main {
   min-height: 80vh;
   padding: 5rem 2rem 10rem 5rem;
-  color: white;
+  /* color: white; */
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -16,7 +16,8 @@
       padding: 2rem 1rem 2rem 1rem; } }
 
 .appBar {
-  background-color: #131821;
+  background-color: #f8fbff;
+  color: #120521;
   height: 5vh;
   padding: 2rem 4rem 2rem 1rem;
   justify-content: center;
@@ -47,7 +48,7 @@
   align-items: center; }
 
 .navbarButton {
-  color: #ffffff;
+  color: #000000;
   text-transform: initial; }
 
 .navbar_drawer {
@@ -310,13 +311,15 @@
         background-color: rgba(117, 5, 227, 0.7); }
     .section3_left_statement {
       margin-top: 3rem;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+ sans-serif;
       font-size: 1.2rem; }
       @media only screen and (max-width: 56.25em) {
         .section3_left_statement {
           font-size: 0.8rem; } }
       .section3_left_statement2 {
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+ sans-serif;
         font-size: 0.8rem;
         margin-top: 1rem; }
         @media only screen and (max-width: 56.25em) {
