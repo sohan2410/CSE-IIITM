@@ -1,45 +1,31 @@
-import React, { useContext } from "react";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import Head from "next/head";
+import React, { useContext } from "react"
+import { useRouter } from "next/router"
+import { useState } from "react"
+import Head from "next/head"
 
-import { Divider, Drawer, Link } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import { Divider, Drawer, Link } from "@mui/material"
+import IconButton from "@mui/material/IconButton"
 
-import {
-  AppBar,
-  Box,
-  Button,
-  Checkbox,
-  Container,
-  Grid,
-  Input,
-  List,
-  ListItem,
-  Typography,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
+import MenuIcon from "@mui/icons-material/Menu"
 
-import classes from "./../styles/Home.module.css";
+import classes from "./../styles/Home.module.css"
 export default function layout({ title, description, children }) {
-  const [sidbarVisible, setSidebarVisible] = useState(false);
+  const [sidbarVisible, setSidebarVisible] = useState(false)
   const sidebarOpenHandler = () => {
-    setSidebarVisible(true);
-  };
+    setSidebarVisible(true)
+  }
   const sidebarCloseHandler = () => {
-    setSidebarVisible(false);
-  };
-  const router = useRouter();
+    setSidebarVisible(false)
+  }
+  const router = useRouter()
   return (
     <div>
       <Head>
         <title>{title ? `${title} - Landing Page` : "Landing page"}</title>
         {description && <meta name="description" content={description}></meta>}
 
-        <link
-          href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -47,35 +33,16 @@ export default function layout({ title, description, children }) {
         <AppBar position="static" className={classes.appBar}>
           <Grid container spacing={3} justifyContent="center">
             <Grid item xs={4} display="flex">
-              <IconButton
-                edge="start"
-                aria-label="open drawer"
-                onClick={sidebarOpenHandler}
-                className={classes.menuButton}
-              >
-                <MenuIcon
-                  onClick={sidebarOpenHandler}
-                  className={classes.navbarButton}
-                />
+              <IconButton edge="start" aria-label="open drawer" onClick={sidebarOpenHandler} className={classes.menuButton}>
+                <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
               </IconButton>
               <div className={classes.firstBox}>Logo</div>
-              <Drawer
-                anchor="left"
-                open={sidbarVisible}
-                onClose={sidebarCloseHandler}
-              >
+              <Drawer anchor="left" open={sidbarVisible} onClose={sidebarCloseHandler}>
                 <List>
                   <ListItem>
-                    <Container
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="space-between"
-                    >
+                    <Container display="flex" alignItems="center" justifyContent="space-between">
                       <Typography>Sidebar panel</Typography>
-                      <IconButton
-                        aria-label="close"
-                        onClick={sidebarCloseHandler}
-                      ></IconButton>
+                      <IconButton aria-label="close" onClick={sidebarCloseHandler}></IconButton>
                     </Container>
                   </ListItem>
                   <Divider light />
@@ -94,40 +61,24 @@ export default function layout({ title, description, children }) {
                   <ListItem>
                     <Button onClick={() => router.push("/about")}>Events</Button>
                   </ListItem>
-                  
                 </List>
               </Drawer>
             </Grid>
             <Grid item xs={8} spacing={3}>
               <div className={classes.secondBox}>
-                <Typography
-                  className={classes.secondBox_menu}
-                  onClick={() => router.push("/")}
-                >
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/")}>
                   Home
                 </Typography>
-                <Typography
-                  className={classes.secondBox_menu}
-                  onClick={() => router.push("/about")}
-                >
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/about")}>
                   People
                 </Typography>
-                <Typography
-                  className={classes.secondBox_menu}
-                  onClick={() => router.push("/feedback")}
-                >
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
                   Research
                 </Typography>
-                <Typography
-                  className={classes.secondBox_menu}
-                  onClick={() => router.push("/feedback")}
-                >
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
                   Programs
                 </Typography>
-                <Typography
-                  className={classes.secondBox_menu}
-                  onClick={() => router.push("/feedback")}
-                >
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
                   Events
                 </Typography>
               </div>
@@ -143,7 +94,7 @@ export default function layout({ title, description, children }) {
         </AppBar>
         {children}
       </div>
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
           <Grid item sm={4} className={classes.footerGridItem}>
             <List className={classes.footerList1}>
@@ -210,7 +161,7 @@ export default function layout({ title, description, children }) {
         </Grid>
         <hr />
         <Typography>All rights reserved.</Typography>
-      </footer>
+      </footer> */}
     </div>
-  );
+  )
 }
