@@ -4,7 +4,17 @@ import Layout from "../components/Layout"
 import DoneIcon from "@mui/icons-material/Done"
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule"
 import Carousel from "react-material-ui-carousel"
-import { Button, Checkbox, Container, Grid, Input, List, ListItem, Typography, Box } from "@mui/material"
+import {
+  Button,
+  Checkbox,
+  Container,
+  Grid,
+  Input,
+  List,
+  ListItem,
+  Typography,
+  Box
+} from "@mui/material"
 import Image1 from "./../assets/image1.jpg"
 import Image2 from "./../assets/image2.jpg"
 import Image3 from "./../assets/image3.jpg"
@@ -12,24 +22,27 @@ import Image4 from "./../assets/image4.jpg"
 import Image5 from "./../assets/image5.jpg"
 import Typical from "react-typical"
 import { useRouter } from "next/router"
-import data from "./api/data"
+import data from "./api/data";
+
+
 export default function Home(props) {
   const router = useRouter()
   return (
     <div>
       <Layout>
         <Container>
-          <Grid container spacing={3}>
-            <Grid item xs={8}>
-              <Typography variant="h2">Computer Science and Engineering</Typography>
-              <Typography>{data.introduction}</Typography>
+          <Grid container spacing={3} >
+            <Grid item xs={12} md={8}
+              className={classes.intro_box}
+            >
+              <Typography variant="h2" className={classes.intro_heading}>Computer Science and Engineering</Typography>
+              <Typography justifyContent={'center'} className={classes.intro_text}>{data.introduction}</Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4} className={classes.news_box}>
               <div>
-                <Typography variant="h3">News Section</Typography>
+                <Typography variant="h3" className={classes.news_heading}>News Section</Typography>
               </div>
             </Grid>
-
             <Grid item xs={12}>
               {/* vision */}
               <Typography variant="h2">Vision</Typography>
@@ -46,7 +59,6 @@ export default function Home(props) {
                   )
                 })}
               </ul>
-
               {/* programs offered by the department */}
               <Typography variant="h2">Programs offered by the department</Typography>
               <ul>
@@ -58,7 +70,6 @@ export default function Home(props) {
                   )
                 })}
               </ul>
-
               {/* head of the department */}
               <Typography variant="h2">Head of the department</Typography>
               <Typography>Name: {data.head_of_department.name}</Typography>

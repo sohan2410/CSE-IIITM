@@ -32,7 +32,7 @@ export default function layout({ title, description, children }) {
       <div className={classes.box}>
         <AppBar position="static" className={classes.appBar}>
           <Grid container spacing={3} justifyContent="center">
-            <Grid item xs={4} display="flex">
+            <Grid item xs={4} display="flex" >
               <IconButton edge="start" aria-label="open drawer" onClick={sidebarOpenHandler} className={classes.menuButton}>
                 <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
               </IconButton>
@@ -64,21 +64,35 @@ export default function layout({ title, description, children }) {
                 </List>
               </Drawer>
             </Grid>
-            <Grid item xs={8} spacing={3}>
+
+            <Grid item xs={8} spacing={3} sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
               <div className={classes.secondBox}>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/")}>
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/")} sx={{
+                  margin: 'auto 27px'
+                }}>
                   Home
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/about")}>
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/about")} sx={{
+                  margin: 'auto 27px'
+                }}>
                   People
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
+                  margin: 'auto 27px'
+                }}>
                   Research
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
+                  margin: 'auto 27px'
+                }}>
                   Programs
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")}>
+                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
+                  margin: 'auto 27px'
+                }}>
                   Events
                 </Typography>
               </div>
