@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import DoneIcon from "@mui/icons-material/Done"
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule"
 import Carousel from "react-material-ui-carousel"
-import { Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
+import { Button, Checkbox, Container, Grid, Input, List, ListItem, Typography, Box } from "@mui/material"
 import Image1 from "./../assets/image1.jpg"
 import Image2 from "./../assets/image2.jpg"
 import Image3 from "./../assets/image3.jpg"
@@ -16,45 +16,62 @@ import data from "./api/data"
 export default function Home(props) {
   const router = useRouter()
   return (
-    <div className={classes.container}>
+    <div>
       <Layout>
-        <Container className={classes.main}>
-          {/* <Typography variant="h3">Popular Products</Typography> */}
+        <Container>
           <Grid container spacing={3}>
-            <Grid item md={6} className={classes.contentBox}>
-              <Typography variant="h2" fontFamily="'Abel', sans-serif;" margin="2rem" className={classes.contentBox_heading}>
-                Computer Science and Engineering
-              </Typography>
-              <Typography margin="0rem 2rem 1rem 2rem" color="#707475" className={classes.contentBox_statement}>
-                {data.introduction}
-              </Typography>
+            <Grid item xs={8}>
+              <Typography variant="h2">Computer Science and Engineering</Typography>
+              <Typography>{data.introduction}</Typography>
+            </Grid>
+            <Grid item xs={4}>
+              <div>
+                <Typography variant="h3">News Section</Typography>
+              </div>
+            </Grid>
 
-              <Typography variant="h2" fontFamily="'Abel', sans-serif;" margin="2rem" className={classes.contentBox_heading}>
-                Vision
-              </Typography>
-              <Typography margin="0rem 2rem 1rem 2rem" color="#707475" className={classes.contentBox_statement}>
-                {data.vision}
-              </Typography>
+            <Grid item xs={12}>
+              {/* vision */}
+              <Typography variant="h2">Vision</Typography>
+              <Typography>{data.vision}</Typography>
 
-              <Typography variant="h2" fontFamily="'Abel', sans-serif;" margin="2rem" className={classes.contentBox_heading}>
-                Mission
-              </Typography>
+              {/* mission */}
+              <Typography variant="h2">Mission</Typography>
               <ul>
                 {data.mission.map((item) => {
                   return (
                     <li>
-                      <Typography margin="0rem 2rem 1rem 2rem" color="#707475" className={classes.contentBox_statement}>
-                        {item}
-                      </Typography>
+                      <Typography>{item}</Typography>
                     </li>
                   )
                 })}
               </ul>
-            </Grid>
-            <Grid item xs={6} className={classes.carousel_con}>
-              <div className={classes.imageBox}>
-                <Typography variant="h3">News Section</Typography>
-              </div>
+
+              {/* programs offered by the department */}
+              <Typography variant="h2">Programs offered by the department</Typography>
+              <ul>
+                {data.pragrams_offered.map((item) => {
+                  return (
+                    <li>
+                      <Typography>{item}</Typography>
+                    </li>
+                  )
+                })}
+              </ul>
+
+              {/* head of the department */}
+              <Typography variant="h2">Head of the department</Typography>
+              <Typography>Name: {data.head_of_department.name}</Typography>
+              <Typography>
+                Area of Interest:{" "}
+                {data.head_of_department.area_of_interest.map((item) => {
+                  return <span>{item}</span>
+                })}
+              </Typography>
+              <Typography>Office Phone: {data.head_of_department.office_phone}</Typography>
+              <Typography>Address: {data.head_of_department.address}</Typography>
+              <Typography>Email: {data.head_of_department.email}</Typography>
+              <Typography>Website: {data.head_of_department?.website}</Typography>
             </Grid>
           </Grid>
         </Container>
