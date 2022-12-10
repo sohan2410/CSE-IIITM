@@ -1,18 +1,9 @@
-import Image from "next/image"
-import classes from "../styles/Home.module.css"
 import Layout from "../components/Layout"
-import DoneIcon from "@mui/icons-material/Done"
-import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule"
-import Carousel from "react-material-ui-carousel"
 import { Button, Checkbox, Container, Grid, Input, List, ListItem, Typography, Box } from "@mui/material"
-import Image1 from "./../assets/image1.jpg"
-import Image2 from "./../assets/image2.jpg"
-import Image3 from "./../assets/image3.jpg"
-import Image4 from "./../assets/image4.jpg"
-import Image5 from "./../assets/image5.jpg"
-import Typical from "react-typical"
+
 import { useRouter } from "next/router"
 import data from "./api/data"
+import Profile from "../components/Profile"
 export default function Home(props) {
   const router = useRouter()
   return (
@@ -60,18 +51,7 @@ export default function Home(props) {
               </ul>
 
               {/* head of the department */}
-              <Typography variant="h2">Head of the department</Typography>
-              <Typography>Name: {data.head_of_department.name}</Typography>
-              <Typography>
-                Area of Interest:{" "}
-                {data.head_of_department.area_of_interest.map((item) => {
-                  return <span>{item}</span>
-                })}
-              </Typography>
-              <Typography>Office Phone: {data.head_of_department.office_phone}</Typography>
-              <Typography>Address: {data.head_of_department.address}</Typography>
-              <Typography>Email: {data.head_of_department.email}</Typography>
-              <Typography>Website: {data.head_of_department?.website}</Typography>
+              <Profile people={data.head_of_department} />
             </Grid>
           </Grid>
         </Container>
