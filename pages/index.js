@@ -18,7 +18,9 @@ export default function Home(props) {
   return (
     <div>
       {/* <Layout> */}
-        <Container>
+        <Container sx={{
+          margin :'10px auto'
+        }} maxWidth='xxl'>
           <Grid container spacing={3} >
             <Grid item xs={12} md={8}
               className={classes.intro_box}
