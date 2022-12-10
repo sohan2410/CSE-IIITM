@@ -45,6 +45,7 @@ const data = {
       email: `stapaswi@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Shashikala`,
       image: `/static/images/shashikala_tapaswi.jpg`,
+      designation: `Professor`,
     },
     {
       name: `Prof. Anupam Shukla`,
@@ -54,6 +55,7 @@ const data = {
       email: `anupamshukla@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/profanupamshukla`,
       image: `/static/images/anupam_shukla.jpg`,
+      designation: `Professor`,
     },
     {
       name: `Prof. Karm Veer Arya`,
@@ -63,6 +65,7 @@ const data = {
       email: `kvarya@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya`,
       image: `/static/images/karm_veer_arya.jpg`,
+      designation: `Professor`,
     },
     {
       name: `Prof. Pramod Kumar Singh`,
@@ -79,6 +82,7 @@ const data = {
       email: `pksingh@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.PKSingh`,
       image: `/static/images/pramod_kumar.jpg`,
+      designation: `Professor`,
     },
     {
       name: `Dr. W Wilfred Godfrey`,
@@ -88,6 +92,7 @@ const data = {
       email: `godfrey@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey`,
       image: `/static/images/wilfred_godfrey.jpg`,
+      designation: `Assistant Professor`,
     },
     {
       name: `Dr. Saumya Bhadauria`,
@@ -103,6 +108,7 @@ const data = {
       email: `saumya@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SaumyaBhadauria`,
       image: `/static/images/saumya_bhadauria.jpg`,
+      designation: `Assistant Professor`,
     },
     {
       name: `Dr. Santosh Singh Rathore`,
@@ -113,6 +119,7 @@ const data = {
       email: `santoshs@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SantoshSinghRathore`,
       image: `/static/images/santosh_singh_rathore.jpg`,
+      designation: `Assistant Professor`,
     },
     {
       name: `Dr. Debanjan Sadhya`,
@@ -123,6 +130,7 @@ const data = {
       email: `debanjan@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Devanjan`,
       image: `/static/images/debanjan_sadhya.jpg`,
+      designation: `Assistant Professor`,
     },
   ],
   labs: [

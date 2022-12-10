@@ -6,11 +6,15 @@ import data from "./api/data"
 import Profile from "../components/Profile"
 export default function people() {
   return (
-    <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" style={{ minHeight: "100vh" }}>
-      <h1>People</h1>
-      {data.faculty_members_of_the_department.map((people, key) => {
-        return <Profile people={people} />
-      })}
-    </Grid>
+    <div>
+      <Typography textAlign="center" variant="h3">
+        People
+      </Typography>
+      <Grid container spacing={0} direction="row" alignItems="center" justifyContent="center" style={{ minHeight: "100vh" }}>
+        {data.faculty_members_of_the_department.map((people, key) => {
+          return <Profile people={people} />
+        })}
+      </Grid>
+    </div>
   )
 }

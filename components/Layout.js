@@ -6,8 +6,7 @@ import Head from "next/head"
 import { Divider, Drawer, Link } from "@mui/material"
 import IconButton from "@mui/material/IconButton"
 
-import { AppBar, 
-  Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
+import { AppBar, Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 
 import classes from "./../styles/Home.module.css"
@@ -33,7 +32,7 @@ export default function layout({ title, description, children }) {
       <div className={classes.box}>
         <AppBar position="static" className={classes.appBar}>
           <Grid container spacing={3} justifyContent="center">
-            <Grid item xs={4} display="flex" >
+            <Grid item xs={4} display="flex">
               <IconButton edge="start" aria-label="open drawer" onClick={sidebarOpenHandler} className={classes.menuButton}>
                 <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
               </IconButton>
@@ -51,49 +50,74 @@ export default function layout({ title, description, children }) {
                     <Button onClick={() => router.push("/")}>Home</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/about")}>People</Button>
+                    <Button onClick={() => router.push("/people")}>People</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/about")}>Research</Button>
+                    <Button onClick={() => router.push("/research")}>Research</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/about")}>Programs</Button>
+                    <Button onClick={() => router.push("/programs")}>Programs</Button>
                   </ListItem>
                   <ListItem>
-                    <Button onClick={() => router.push("/about")}>Events</Button>
+                    <Button onClick={() => router.push("/events")}>Events</Button>
                   </ListItem>
                 </List>
               </Drawer>
             </Grid>
 
-            <Grid item xs={8} spacing={3} sx={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}>
+            <Grid
+              item
+              xs={8}
+              spacing={3}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <div className={classes.secondBox}>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/")} sx={{
-                  margin: 'auto 27px'
-                }}>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
                   Home
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/about")} sx={{
-                  margin: 'auto 27px'
-                }}>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/people")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
                   People
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
-                  margin: 'auto 27px'
-                }}>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/research")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
                   Research
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
-                  margin: 'auto 27px'
-                }}>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/programs")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
                   Programs
                 </Typography>
-                <Typography className={classes.secondBox_menu} onClick={() => router.push("/feedback")} sx={{
-                  margin: 'auto 27px'
-                }}>
+                <Typography
+                  className={classes.secondBox_menu}
+                  onClick={() => router.push("/events")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
                   Events
                 </Typography>
               </div>
@@ -109,15 +133,12 @@ export default function layout({ title, description, children }) {
         </AppBar>
         {children}
       </div>
-      {/* <footer className={classes.footer}>
+      <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
           <Grid item sm={4} className={classes.footerGridItem}>
             <List className={classes.footerList1}>
               <Container className={classes.footer_logo}>Logo</Container>
-              <Typography className={classes.footer_statement}>
-                With name. simply visit a URL. drop a comment and you're done.
-                No more wading through unclear. unactionable feedback.
-              </Typography>
+              <Typography className={classes.footer_statement}>With name. simply visit a URL. drop a comment and you're done. No more wading through unclear. unactionable feedback.</Typography>
             </List>
           </Grid>
           <Grid container sm={8} className={classes.footerGridCon}>
@@ -133,41 +154,25 @@ export default function layout({ title, description, children }) {
             <Grid item xs={3} className={classes.footerGridItem2}>
               <List>
                 <ListItem>Conpany Pages</ListItem>
-                <ListItem className={classes.footerGridItem2}>
-                  About us
-                </ListItem>
+                <ListItem className={classes.footerGridItem2}>About us</ListItem>
                 <ListItem className={classes.footerGridItem2}>Blog</ListItem>
                 <ListItem className={classes.footerGridItem2}>Careers</ListItem>
-                <ListItem className={classes.footerGridItem2}>
-                  Help Center
-                </ListItem>
+                <ListItem className={classes.footerGridItem2}>Help Center</ListItem>
               </List>
             </Grid>
             <Grid item xs={3} className={classes.footerGridItem2}>
               <List>
                 <ListItem>Other Pages</ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/contact")}
-                >
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/contact")}>
                   contact
                 </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/signup")}
-                >
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/signup")}>
                   Sign up
                 </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/signin")}
-                >
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/signin")}>
                   Sign in
                 </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/policy")}
-                >
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/policy")}>
                   Licensing
                 </ListItem>
               </List>
@@ -176,7 +181,7 @@ export default function layout({ title, description, children }) {
         </Grid>
         <hr />
         <Typography>All rights reserved.</Typography>
-      </footer> */}
+      </footer>
     </div>
   )
 }
