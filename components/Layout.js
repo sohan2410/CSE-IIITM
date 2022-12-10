@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 import Head from "next/head"
 
-import { Divider, Drawer, Link } from "@mui/material"
+import { Divider, Drawer, Link, CardMedia } from "@mui/material"
 import IconButton from "@mui/material/IconButton"
 
 import { AppBar, Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
@@ -20,7 +20,7 @@ export default function layout({ title, description, children }) {
   }
   const router = useRouter()
   return (
-    <div >
+    <div>
       <Head>
         <title>{title ? `${title} - Landing Page` : "Landing page"}</title>
         {description && <meta name="description" content={description}></meta>}
@@ -36,7 +36,9 @@ export default function layout({ title, description, children }) {
               <IconButton edge="start" aria-label="open drawer" onClick={sidebarOpenHandler} className={classes.menuButton}>
                 <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
               </IconButton>
-              <div className={classes.firstBox}>Logo</div>
+              <div className={classes.firstBox}>
+                <CardMedia component="img" image="/static/images/iiitm.png" alt="IIITM" style={{ height: "150px", width: "150px" }} />
+              </div>
               <Drawer anchor="left" open={sidbarVisible} onClose={sidebarCloseHandler}>
                 <List>
                   <ListItem>
@@ -54,6 +56,9 @@ export default function layout({ title, description, children }) {
                   </ListItem>
                   <ListItem>
                     <Button onClick={() => router.push("/research")}>Research</Button>
+                  </ListItem>
+                  <ListItem>
+                    <Button onClick={() => router.push("/labs")}>Labs</Button>
                   </ListItem>
                   <ListItem>
                     <Button onClick={() => router.push("/programs")}>Programs</Button>
@@ -104,6 +109,15 @@ export default function layout({ title, description, children }) {
                 </Typography>
                 <Typography
                   className={classes.secondBox_menu}
+                  onClick={() => router.push("/labs")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
+                  Labs
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
                   onClick={() => router.push("/programs")}
                   sx={{
                     margin: "auto 27px",
@@ -137,7 +151,9 @@ export default function layout({ title, description, children }) {
         <Grid className={classes.footerGridCon} container spacing={2}>
           <Grid item sm={4} className={classes.footerGridItem}>
             <List className={classes.footerList1}>
-              <Container className={classes.footer_logo}>Logo</Container>
+              <Container className={classes.footer_logo}>
+                <CardMedia component="img" image="/static/images/iiitm.png" alt="IIITM" />
+              </Container>
               <Typography className={classes.footer_statement}>With name. simply visit a URL. drop a comment and you're done. No more wading through unclear. unactionable feedback.</Typography>
             </List>
           </Grid>
