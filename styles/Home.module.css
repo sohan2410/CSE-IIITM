@@ -718,10 +718,18 @@
   font-size: 48px;
 }
 
+.container{
+  padding: 14px 60px;
+}
+
 
 @media screen and (max-width: 899.5px) {
+
+  .container{
+    padding: 5px 50px;
+  }
   .intro_box {
-    height: 455px;
+    height: 525px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -729,7 +737,7 @@
   }
 
   .intro_heading {
-    font-size: 55px;
+    font-size: 53px;
     text-align: center;
   }
 
@@ -745,7 +753,11 @@
 
 @media screen and (max-width: 799.5px) {
   .intro_box {
-    height: 490px;
+    height: 560px;
+  }
+  .intro_heading {
+    font-size: 50px;
+    text-align: center;
   }
 
   .news_box {
@@ -759,22 +771,28 @@
 
 @media screen and (max-width: 699.5px) {
   .intro_box {
-    height: 535px;
+    height: 600px;
   }
 
   .intro_heading {
-    font-size: 46px;
+    font-size: 45px;
     text-align: center;
   }
 
   .news_box {
     margin-top: 0px;
   }
+  .intro_text {
+    font-size: .93rem;
+  }
 }
 
 @media screen and (max-width: 599.5px) {
+  .container{
+    padding: 5px 40px;
+  }
   .intro_box {
-    height: 620px;
+    height: 670px;
   }
 
   .intro_heading {
@@ -784,8 +802,11 @@
 }
 
 @media screen and (max-width: 499.5px) {
+  .container{
+    padding: 5px 30px;
+  }
   .intro_box {
-    height: 680px;
+    height: 700px;
   }
 
   .intro_heading {
@@ -794,8 +815,11 @@
 }
 
 @media screen and (max-width: 433.5px) {
+  .container{
+    padding: 5px 10px;
+  }
   .intro_box {
-    height: 670px;
+    height: 720px;
   }
 
   .intro_text {
@@ -804,13 +828,20 @@
 }
 
 @media screen and (max-width: 388.5px) {
+  .container{
+    padding: 5px 0px;
+  }
   .intro_box {
-    height: 740px;
+    height: 785px;
   }
 
   .intro_heading {
-    font-size: 34px;
+    font-size: 33px;
   }
+  .intro_text {
+    font-size: .83rem;
+  }
+
 }
 
 @media screen and (max-width: 340px) {
