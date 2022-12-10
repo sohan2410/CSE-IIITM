@@ -33,6 +33,8 @@ const data = {
     office_phone: `+91-751-2449830`,
     address: `110, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India.`,
     email: `hodcs@iiitm.ac.in`,
+    image: `/static/images/karm_veer_arya.jpg`,
+    website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya`,
   },
   faculty_members_of_the_department: [
     {
@@ -42,6 +44,7 @@ const data = {
       address: `116, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India`,
       email: `stapaswi@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Shashikala`,
+      image: `/static/images/shashikala_tapaswi.jpg`,
     },
     {
       name: `Prof. Anupam Shukla`,
@@ -50,6 +53,7 @@ const data = {
       // address: `116, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India`,
       email: `anupamshukla@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/profanupamshukla`,
+      image: `/static/images/anupam_shukla.jpg`,
     },
     {
       name: `Prof. Karm Veer Arya`,
@@ -58,6 +62,7 @@ const data = {
       address: `110, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India.`,
       email: `kvarya@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya`,
+      image: `/static/images/karm_veer_arya.jpg`,
     },
     {
       name: `Prof. Pramod Kumar Singh`,
@@ -73,6 +78,7 @@ const data = {
       address: `108, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India`,
       email: `pksingh@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.PKSingh`,
+      image: `/static/images/pramod_kumar.jpg`,
     },
     {
       name: `Dr. W Wilfred Godfrey`,
@@ -81,6 +87,7 @@ const data = {
       address: `201, Block - D, ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.), India.`,
       email: `godfrey@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey`,
+      image: `/static/images/wilfred_godfrey.jpg`,
     },
     {
       name: `Dr. Saumya Bhadauria`,
@@ -95,6 +102,7 @@ const data = {
         `,
       email: `saumya@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SaumyaBhadauria`,
+      image: `/static/images/saumya_bhadauria.jpg`,
     },
     {
       name: `Dr. Santosh Singh Rathore`,
@@ -104,6 +112,7 @@ const data = {
           `,
       email: `santoshs@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SantoshSinghRathore`,
+      image: `/static/images/santosh_singh_rathore.jpg`,
     },
     {
       name: `Dr. Debanjan Sadhya`,
@@ -113,6 +122,7 @@ const data = {
             `,
       email: `debanjan@iiitm.ac.in`,
       website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Devanjan`,
+      image: `/static/images/debanjan_sadhya.jpg`,
     },
   ],
   labs: [

@@ -6,7 +6,8 @@ import Head from "next/head"
 import { Divider, Drawer, Link } from "@mui/material"
 import IconButton from "@mui/material/IconButton"
 
-import { AppBar, Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
+import { AppBar, 
+  Box, Button, Checkbox, Container, Grid, Input, List, ListItem, Typography } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 
 import classes from "./../styles/Home.module.css"

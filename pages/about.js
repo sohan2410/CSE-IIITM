@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 export default function about() {
   return (
     <div>
-      <Layout>
         <div className={classes.about}>
           <Typography variant="h2">About</Typography>
           <Container className={classes.about_con}>
@@ -47,7 +46,6 @@ export default function about() {
             </Typography>
           </Container>
         </div>
-      </Layout>
     </div>
   );
 }
