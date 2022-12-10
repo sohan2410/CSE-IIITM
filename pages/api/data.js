@@ -35,6 +35,7 @@ const data = {
     email: `hodcs@iiitm.ac.in`,
     image: `/static/images/karm_veer_arya.jpg`,
     website: `https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya`,
+    designation: `Professor`,
   },
   faculty_members_of_the_department: [
     {

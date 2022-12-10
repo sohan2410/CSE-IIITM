@@ -10,6 +10,7 @@ import { AppBar, Box, Button, Checkbox, Container, Grid, Input, List, ListItem, 
 import MenuIcon from "@mui/icons-material/Menu"
 
 import classes from "./../styles/Home.module.css"
+import data from "../pages/api/data"
 export default function layout({ title, description, children }) {
   const [sidbarVisible, setSidebarVisible] = useState(false)
   const sidebarOpenHandler = () => {
@@ -127,6 +128,15 @@ export default function layout({ title, description, children }) {
                 </Typography>
                 <Typography
                   className={classes.secondBox_menu}
+                  onClick={() => router.push("/publications")}
+                  sx={{
+                    margin: "auto 27px",
+                  }}
+                >
+                  Publications
+                </Typography>
+                <Typography
+                  className={classes.secondBox_menu}
                   onClick={() => router.push("/events")}
                   sx={{
                     margin: "auto 27px",
@@ -149,54 +159,52 @@ export default function layout({ title, description, children }) {
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
-          <Grid item sm={4} className={classes.footerGridItem}>
-            <List className={classes.footerList1}>
-              <Container className={classes.footer_logo}>
-                <CardMedia component="img" image="/static/images/iiitm.png" alt="IIITM" />
-              </Container>
-              <Typography className={classes.footer_statement}>With name. simply visit a URL. drop a comment and you're done. No more wading through unclear. unactionable feedback.</Typography>
-            </List>
+          <Grid item sm={4}>
+            {/* <List style={{ alignItems: "start" }}> */}
+            <Typography variant="h5" gutterBottom>
+              Contact:
+            </Typography>
+            <Typography>{data.head_of_department.name}</Typography>
+            <Typography>{data.head_of_department.designation}</Typography>
+            <Typography>{data.head_of_department.address}</Typography>
+            <Typography>Email: {data.head_of_department.email}</Typography>
+            <Typography>Phone: {data.head_of_department.office_phone}</Typography>
+            {/* </List> */}
           </Grid>
           <Grid container sm={8} className={classes.footerGridCon}>
-            <Grid item sm={3}>
-              <List>
-                <ListItem>Landing Pages</ListItem>
-                <ListItem className={classes.footerGridItem2}>Page 1</ListItem>
-                <ListItem className={classes.footerGridItem2}>Page 2</ListItem>
-                <ListItem className={classes.footerGridItem2}>Page 3</ListItem>
-                <ListItem className={classes.footerGridItem2}>Page 4</ListItem>
-              </List>
-            </Grid>
-            <Grid item xs={3} className={classes.footerGridItem2}>
-              <List>
-                <ListItem>Conpany Pages</ListItem>
-                <ListItem className={classes.footerGridItem2}>About us</ListItem>
-                <ListItem className={classes.footerGridItem2}>Blog</ListItem>
-                <ListItem className={classes.footerGridItem2}>Careers</ListItem>
-                <ListItem className={classes.footerGridItem2}>Help Center</ListItem>
-              </List>
-            </Grid>
             <Grid item xs={3} className={classes.footerGridItem2}>
               <List>
                 <ListItem>Other Pages</ListItem>
-                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/contact")}>
-                  contact
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/people")}>
+                  People
                 </ListItem>
-                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/signup")}>
-                  Sign up
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/research")}>
+                  research
                 </ListItem>
-                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/signin")}>
-                  Sign in
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/labs")}>
+                  labs
                 </ListItem>
-                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/policy")}>
-                  Licensing
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/programs")}>
+                  Programs
+                </ListItem>
+                <ListItem className={classes.footerGridItem2} onClick={() => router.push("/events")}>
+                  Events
                 </ListItem>
               </List>
             </Grid>
           </Grid>
         </Grid>
         <hr />
-        <Typography>All rights reserved.</Typography>
+        <Typography textAlign="end" style={{ padding: "10px 0 10px 0" }}>
+          Developed by{" "}
+          <a href="https://www.linkedin.com/in/sohan-bandary/" target="_blank">
+            Sohan Bandary
+          </a>{" "}
+          and{" "}
+          <a href="https://www.linkedin.com/in/yana-gupta/" target="_blank">
+            Yana Gupta
+          </a>
+        </Typography>
       </footer>
     </div>
   )

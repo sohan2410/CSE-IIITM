@@ -10,8 +10,8 @@ import data from "./api/data"
 
 const labs = () => {
   return (
-    <TableContainer component={Paper} style={{ padding: "10px" }}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} style={{ margin: "50px 0px 0px 5px" }}>
+      <Table sx={{ minWidth: 650 }} aria-label="sticky table" stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell style={{ fontWeight: "bold" }}>Sl No.</TableCell>
