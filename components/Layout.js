@@ -20,7 +20,7 @@ export default function layout({ title, description, children }) {
   }
   const router = useRouter()
   return (
-    <div>
+    <div >
       <Head>
         <title>{title ? `${title} - Landing Page` : "Landing page"}</title>
         {description && <meta name="description" content={description}></meta>}
