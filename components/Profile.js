@@ -1,14 +1,13 @@
 import React from "react"
 import { Typography, Card, CardContent, CardMedia, CardActions } from "@mui/material"
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LanguageIcon from "@mui/icons-material/Language";
-import { Link } from "@mui/material";
-import classes from '../styles/Home.module.css'
+import MailOutlineIcon from "@mui/icons-material/MailOutline"
+import LanguageIcon from "@mui/icons-material/Language"
+import { Link } from "@mui/material"
+import classes from "../styles/Home.module.css"
 
 const Profile = ({ people }) => {
   return (
-    <Card
-      sx={{ width: 350, height: 620 }} style={{ margin: "20px", boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)" }}>
+    <Card sx={{ width: 350, height: 560 }} style={{ margin: "20px", boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)" }}>
       <CardMedia component="img" height="280" width={"180px"} image={people.image} alt={people.name} style={{ display: "block", magrin: "0 auto" }} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div" textAlign="center" margin={"0px auto 6px auto"}>
@@ -38,7 +37,7 @@ const Profile = ({ people }) => {
           justifyContent: "center",
         }}
       >
-        <Link href={people.email} target="_blank" >
+        <Link href={`mailto:${people.email}`} target="_blank">
           <MailOutlineIcon style={{ color: "#515567" }} />
         </Link>
         <Link href={people.website} target="_blank">

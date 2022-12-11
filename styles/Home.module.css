@@ -49,8 +49,8 @@
   }
 }
 
-.icon:hover{
-  color: blue
+.icon:hover {
+  color: blue;
 }
 
 .secondBox_menu {
@@ -61,7 +61,7 @@
   font-weight: bolder;
 }
 
-.secondBox_menu:hover{
+.secondBox_menu:hover {
   color: #515567;
 }
 
@@ -120,11 +120,9 @@
   cursor: pointer;
 }
 
-.footerGridItem2:hover{
+.footerGridItem2:hover {
   color: #989faf;
 }
-
-
 
 .footerList1 {
   text-align: start;
@@ -712,8 +710,7 @@
   padding: 2rem 1rem 2rem 1rem;
 }
 
-
-.navLink:hover{
+.navLink:hover {
   color: #989faf;
 }
 
@@ -723,6 +720,7 @@
 
 .intro_heading {
   font-size: 60px;
+  padding-top: 1rem;
 }
 
 .news_box {
@@ -731,25 +729,24 @@
 
 .news_heading {
   font-size: 48px;
+  padding-top: 1rem;
 }
 
-.container{
+.container {
   padding: 12px 90px;
   /* padding: 14px 60px; */
 }
 
-.link:hover{
+.link:hover {
   color: #444c5e;
 }
 
-.home_box{
+.home_box {
   overflow-x: hidden;
 }
 
 @media screen and (max-width: 899.5px) {
-
-
-  .container{
+  .container {
     padding: 5px 60px;
   }
   .intro_box {

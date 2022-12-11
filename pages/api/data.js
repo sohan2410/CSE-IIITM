@@ -7,7 +7,7 @@ const data = {
     postgraduate programme in the field of Information Security. The students are encouraged to
     carry out projects in niche areas including Information Systems, Computer Vision, Computer
     Networks and Software Engineering, as well as specializations in emerging areas of importance
-    such as cloud computing, artificial intelligence, blockchain, machine learning and data analytics.\n
+    such as cloud computing, artificial intelligence, blockchain, machine learning and data analytics.<br>
     The department has a mix of young and experienced senior faculty members specializing in a
     wide spectrum of research and teaching areas. The department is in the process of developing
     state-of-the-art laboratories to cater to the needs of the curriculum. Although at its nascent

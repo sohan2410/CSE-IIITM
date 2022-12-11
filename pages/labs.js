@@ -1,4 +1,5 @@
 import * as React from "react"
+import Head from "next/head"
 import Table from "@mui/material/Table"
 import TableBody from "@mui/material/TableBody"
 import TableCell from "@mui/material/TableCell"
@@ -10,32 +11,36 @@ import data from "./api/data"
 
 const labs = () => {
   return (
-    <TableContainer component={Paper} style={{ margin: "50px 0px 0px 5px" }}>
-      <Table sx={{ minWidth: 650 }} aria-label="sticky table" stickyHeader>
-        <TableHead>
-          <TableRow>
-            <TableCell style={{ fontWeight: "bold" }}>Sl No.</TableCell>
-            <TableCell style={{ fontWeight: "bold" }}>Laboratory Name</TableCell>
-            <TableCell style={{ fontWeight: "bold" }}>Location</TableCell>
-            <TableCell style={{ fontWeight: "bold" }}>Faculty-in-charge</TableCell>
-            <TableCell style={{ fontWeight: "bold" }}>Facilities</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.labs.map((lab) => {
-            return (
-              <TableRow key={lab.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                <TableCell component="th" scope="row">
-                  {lab.id}
-                </TableCell>
-                <TableCell>{lab.laboratory_name}</TableCell>
-                <TableCell>{lab.location}</TableCell>
-                <TableCell>{lab.faculty_in_charge}</TableCell>
-                <TableCell>{lab.facilities}</TableCell>
-              </TableRow>
-            )
-          })}
-          {/* {rows.map((row) => (
+    <div>
+      <Head>
+        <title>Labs</title>
+      </Head>
+      <TableContainer component={Paper} style={{ margin: "50px 0px 50px 5px" }}>
+        <Table sx={{ minWidth: 650 }} aria-label="sticky table" stickyHeader>
+          <TableHead>
+            <TableRow>
+              <TableCell style={{ fontWeight: "bold" }}>Sl No.</TableCell>
+              <TableCell style={{ fontWeight: "bold" }}>Laboratory Name</TableCell>
+              <TableCell style={{ fontWeight: "bold" }}>Location</TableCell>
+              <TableCell style={{ fontWeight: "bold" }}>Faculty-in-charge</TableCell>
+              <TableCell style={{ fontWeight: "bold" }}>Facilities</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.labs.map((lab) => {
+              return (
+                <TableRow key={lab.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                  <TableCell component="th" scope="row">
+                    {lab.id}
+                  </TableCell>
+                  <TableCell>{lab.laboratory_name}</TableCell>
+                  <TableCell>{lab.location}</TableCell>
+                  <TableCell>{lab.faculty_in_charge}</TableCell>
+                  <TableCell>{lab.facilities}</TableCell>
+                </TableRow>
+              )
+            })}
+            {/* {rows.map((row) => (
             <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
               <TableCell component="th" scope="row">
                 {row.name}
@@ -46,9 +51,10 @@ const labs = () => {
               <TableCell align="right">{row.protein}</TableCell>
             </TableRow>
           ))} */}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   )
 }
 

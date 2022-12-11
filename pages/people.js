@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { Typography, Grid, Card, CardContent, CardMedia, CardActionArea } from "@mui/material"
 import { Container } from "@mui/system"
 import React from "react"
@@ -7,6 +8,9 @@ import Profile from "../components/Profile"
 export default function people() {
   return (
     <div>
+      <Head>
+        <title>People</title>
+      </Head>
       {/* <Typography textAlign="center" variant="h3" padding={2}>
         People
       </Typography> */}
