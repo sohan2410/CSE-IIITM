@@ -1,6 +1,6 @@
 .box {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -719,14 +719,14 @@
 }
 
 .container{
-  padding: 14px 60px;
+  padding: 12px 90px;
 }
 
 
 @media screen and (max-width: 899.5px) {
 
   .container{
-    padding: 5px 50px;
+    padding: 5px 60px;
   }
   .intro_box {
     height: 525px;
