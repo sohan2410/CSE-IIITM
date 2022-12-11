@@ -710,6 +710,10 @@
   padding: 2rem 1rem 2rem 1rem;
 }
 
+.mission_text{
+  margin-bottom: 40px;
+}
+
 .navLink:hover {
   color: #989faf;
 }
@@ -744,6 +748,8 @@
 .home_box {
   overflow-x: hidden;
 }
+
+
 
 @media screen and (max-width: 899.5px) {
   .container {

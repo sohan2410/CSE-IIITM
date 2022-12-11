@@ -14,18 +14,31 @@ export default function Home(props) {
         <title>Home</title>
       </Head>
       {/* <Layout> */}
-      <Container maxWidth="xl" className={classes.home_box} sx={{}}>
+      <Container
+        maxWidth="xl"
+        className={classes.home_box} sx={{}}>
         <Grid
           container
           spacing={3}
           // padding={'10px 60px'}
           className={classes.container}
         >
-          <Grid item xs={12} md={8} className={classes.intro_box}>
-            <Typography variant="h2" className={classes.intro_heading}>
+          <Grid
+            item xs={12}
+            md={8}
+            className={classes.intro_box}>
+            <Typography variant="h2"
+              className={classes.intro_heading}>
               Computer Science and Engineering
             </Typography>
-            <div justifyContent={"center"} className={classes.intro_text} style={{ fontFamily: "Bell MT", textAlign: "justify", marginTop: "40px", fontSize: "18px", lineHeight: "2" }} dangerouslySetInnerHTML={{ __html: data.introduction }}></div>
+            <div justifyContent={"center"} className={classes.intro_text}
+              style={{
+                fontFamily: "Bell MT",
+                textAlign: "justify",
+                marginTop: "40px",
+                fontSize: "18px",
+                lineHeight: "1.8"
+              }} dangerouslySetInnerHTML={{ __html: data.introduction }}></div>
           </Grid>
           <Grid item xs={12} md={4} className={classes.news_box}>
             <div>
@@ -35,34 +48,47 @@ export default function Home(props) {
             </div>
           </Grid>
           <Grid item xs={12}>
+
             {/* vision */}
             <Typography variant="h2" align="center">
               Vision
             </Typography>
-            <Typography>{data.vision}</Typography>
+            <Typography style={{ lineHeight: '1.8', fontSize: '18px', marginTop: '36px', marginBottom: '36px' }}>{data.vision}</Typography>
 
             {/* mission */}
             <Typography variant="h2" align="center">
               Mission
             </Typography>
-            <ul>
+            <ul className={classes.mission_text}>
               {data.mission.map((item) => {
                 return (
                   <li>
-                    <Typography>{item}</Typography>
+                    <Typography
+                      sx={{
+                        lineHeight: '1.7',
+                        fontSize: '18px',
+                      }}>{item}</Typography>
                   </li>
                 )
               })}
             </ul>
+
+
             {/* programs offered by the department */}
-            <Typography variant="h2" align="center">
+            <Typography
+              variant="h2"
+              align="center" >
               Programs offered by the department
             </Typography>
-            <ul>
+
+            <ul >
               {data.pragrams_offered.map((item) => {
                 return (
                   <li>
-                    <Typography>{item}</Typography>
+                    <Typography sx={{
+                      lineHeight: '1.7',
+                      fontSize: '18px',
+                    }}>{item}</Typography>
                   </li>
                 )
               })}
