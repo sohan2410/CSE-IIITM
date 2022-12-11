@@ -49,11 +49,20 @@
   }
 }
 
+.icon:hover{
+  color: blue
+}
+
 .secondBox_menu {
   height: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-weight: bolder;
+}
+
+.secondBox_menu:hover{
+  color: #515567;
 }
 
 .thirdBox {
@@ -74,7 +83,7 @@
 .footer {
   background-color: #1e1f24;
   color: white;
-  text-align: center;
+  text-align: start;
   padding: 2rem;
 }
 
@@ -98,7 +107,7 @@
 
 .footerGridCon {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -110,6 +119,12 @@
 .footerGridItem2 {
   cursor: pointer;
 }
+
+.footerGridItem2:hover{
+  color: #989faf;
+}
+
+
 
 .footerList1 {
   text-align: start;
@@ -143,8 +158,6 @@
   height: 100%;
   width: 100%;
 }
-
-
 
 @media only screen and (max-width: 75em) {
   .contentBox {
@@ -381,7 +394,6 @@
 .sec2GridT2 {
   text-align: center;
 }
-
 .section3 {
   background-color: white;
   min-height: 80vh;
@@ -470,8 +482,7 @@
 
 .section3_left_statement {
   margin-top: 3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.2rem;
 }
 
@@ -482,8 +493,7 @@
 }
 
 .section3_left_statement2 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.8rem;
   margin-top: 1rem;
 }
@@ -702,6 +712,11 @@
   padding: 2rem 1rem 2rem 1rem;
 }
 
+
+.navLink:hover{
+  color: #989faf;
+}
+
 .intro_box {
   height: 90vh;
 }
@@ -720,10 +735,19 @@
 
 .container{
   padding: 12px 90px;
+  /* padding: 14px 60px; */
 }
 
+.link:hover{
+  color: #444c5e;
+}
+
+.home_box{
+  overflow-x: hidden;
+}
 
 @media screen and (max-width: 899.5px) {
+
 
   .container{
     padding: 5px 60px;
@@ -765,7 +789,7 @@
   }
 
   .intro_text {
-    font-size: .98rem;
+    font-size: 0.98rem;
   }
 }
 
@@ -783,12 +807,12 @@
     margin-top: 0px;
   }
   .intro_text {
-    font-size: .93rem;
+    font-size: 0.93rem;
   }
 }
 
 @media screen and (max-width: 599.5px) {
-  .container{
+  .container {
     padding: 5px 40px;
   }
   .intro_box {
@@ -802,7 +826,7 @@
 }
 
 @media screen and (max-width: 499.5px) {
-  .container{
+  .container {
     padding: 5px 30px;
   }
   .intro_box {
@@ -815,7 +839,7 @@
 }
 
 @media screen and (max-width: 433.5px) {
-  .container{
+  .container {
     padding: 5px 10px;
   }
   .intro_box {
@@ -823,12 +847,12 @@
   }
 
   .intro_text {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 388.5px) {
-  .container{
+  .container {
     padding: 5px 0px;
   }
   .intro_box {
@@ -839,9 +863,8 @@
     font-size: 33px;
   }
   .intro_text {
-    font-size: .83rem;
+    font-size: 0.83rem;
   }
-
 }
 
 @media screen and (max-width: 340px) {

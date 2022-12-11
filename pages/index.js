@@ -20,8 +20,9 @@ export default function Home(props) {
   return (
     <div >
       {/* <Layout> */}
-      <Container maxWidth="xl" className={classes.home_box} sx={{
-      }}>
+      <Container maxWidth="xl"
+        className={classes.home_box} sx={{
+        }}>
         <Grid container
           spacing={3}
           // padding={'10px 60px'} 
@@ -39,22 +40,22 @@ export default function Home(props) {
           </Grid>
           <Grid item xs={12}>
             {/* vision */}
-            <Typography variant="h2">Vision</Typography>
+            <Typography variant="h2" align="center">Vision</Typography>
             <Typography>{data.vision}</Typography>
 
             {/* mission */}
-            <Typography variant="h2">Mission</Typography>
+            <Typography variant="h2" align="center">Mission</Typography>
             <ul>
               {data.mission.map((item) => {
                 return (
                   <li>
-                    <Typography>{item}</Typography>
+                    <Typography >{item}</Typography>
                   </li>
                 )
               })}
             </ul>
             {/* programs offered by the department */}
-            <Typography variant="h2">Programs offered by the department</Typography>
+            <Typography variant="h2" align="center">Programs offered by the department</Typography>
             <ul>
               {data.pragrams_offered.map((item) => {
                 return (
@@ -66,7 +67,7 @@ export default function Home(props) {
             </ul>
 
             {/* head of the department */}
-            <Typography variant="h2">Head of the department</Typography>
+            <Typography variant="h2" align="center">Head of the department</Typography>
             <Typography>Name: {data.head_of_department.name}</Typography>
             <Typography>
               Area of Interest:{" "}
