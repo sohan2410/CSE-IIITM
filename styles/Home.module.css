@@ -711,7 +711,11 @@
 }
 
 .mission_text{
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+}
+.program_text{
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .navLink:hover {
@@ -719,7 +723,7 @@
 }
 
 .intro_box {
-  height: 90vh;
+  height: 100%;
 }
 
 .intro_heading {
@@ -749,6 +753,13 @@
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 1024px){
+  .intro_box{
+    margin-bottom: 100px;
+  }
+  
+}
+
 
 
 @media screen and (max-width: 899.5px) {
@@ -756,7 +767,7 @@
     padding: 5px 60px;
   }
   .intro_box {
-    height: 525px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -779,11 +790,9 @@
 }
 
 @media screen and (max-width: 799.5px) {
-  .intro_box {
-    height: 560px;
-  }
+  
   .intro_heading {
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
   }
 
@@ -797,12 +806,10 @@
 }
 
 @media screen and (max-width: 699.5px) {
-  .intro_box {
-    height: 600px;
-  }
+
 
   .intro_heading {
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
   }
 
@@ -818,12 +825,8 @@
   .container {
     padding: 5px 40px;
   }
-  .intro_box {
-    height: 670px;
-  }
-
+  
   .intro_heading {
-    font-size: 42px;
     margin-top: 10px;
   }
 }
@@ -832,21 +835,14 @@
   .container {
     padding: 5px 30px;
   }
-  .intro_box {
-    height: 700px;
-  }
+ 
 
-  .intro_heading {
-    font-size: 38px;
-  }
+  
 }
 
 @media screen and (max-width: 433.5px) {
   .container {
     padding: 5px 10px;
-  }
-  .intro_box {
-    height: 720px;
   }
 
   .intro_text {
@@ -858,12 +854,10 @@
   .container {
     padding: 5px 0px;
   }
-  .intro_box {
-    height: 785px;
-  }
+  
 
   .intro_heading {
-    font-size: 33px;
+    font-size: 39px;
   }
   .intro_text {
     font-size: 0.83rem;
@@ -871,25 +865,9 @@
 }
 
 @media screen and (max-width: 340px) {
-  .intro_box {
-    height: 800px;
-  }
+  
   .intro_heading {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .intro_box {
-    height: 830px;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .intro_box {
-    height: 850px;
-  }
-  .intro_heading {
-    font-size: 30px;
-  }
-}

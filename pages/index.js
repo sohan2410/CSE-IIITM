@@ -28,12 +28,16 @@ export default function Home(props) {
             md={8}
             className={classes.intro_box}>
             <Typography variant="h2"
+              sx={{
+                fontFamily: 'Roboto Mono',
+              }}
+
               className={classes.intro_heading}>
               Computer Science and Engineering
             </Typography>
             <div justifyContent={"center"} className={classes.intro_text}
               style={{
-                fontFamily: "Bell MT",
+                fontFamily: 'Varela Round',
                 textAlign: "justify",
                 marginTop: "40px",
                 fontSize: "18px",
@@ -42,7 +46,9 @@ export default function Home(props) {
           </Grid>
           <Grid item xs={12} md={4} className={classes.news_box}>
             <div>
-              <Typography variant="h3" className={classes.news_heading} align="center">
+              <Typography variant="h3" className={classes.news_heading} align="center" sx={{
+                fontFamily: 'Roboto Mono',
+              }}>
                 News Section
               </Typography>
             </div>
@@ -50,13 +56,24 @@ export default function Home(props) {
           <Grid item xs={12}>
 
             {/* vision */}
-            <Typography variant="h2" align="center">
+            <Typography variant="h2" align="center" sx={{
+              fontFamily: 'Roboto Mono',
+            }}>
               Vision
             </Typography>
-            <Typography style={{ lineHeight: '1.8', fontSize: '18px', marginTop: '36px', marginBottom: '36px' }}>{data.vision}</Typography>
+            <Typography style={{
+              lineHeight: '1.8',
+              fontSize: '18px',
+              marginTop: '36px',
+              marginBottom: '36px',
+              fontFamily: 'Varela Round',
+            }}>{data.vision}</Typography>
 
             {/* mission */}
-            <Typography variant="h2" align="center">
+            <Typography variant="h2" align="center"
+              sx={{
+                fontFamily: 'Roboto Mono',
+              }}>
               Mission
             </Typography>
             <ul className={classes.mission_text}>
@@ -67,6 +84,7 @@ export default function Home(props) {
                       sx={{
                         lineHeight: '1.7',
                         fontSize: '18px',
+                        fontFamily: 'Varela Round'
                       }}>{item}</Typography>
                   </li>
                 )
@@ -77,34 +95,45 @@ export default function Home(props) {
             {/* programs offered by the department */}
             <Typography
               variant="h2"
-              align="center" >
+              align="center"
+              marginTop={'40px'} sx={{
+                fontFamily: 'Roboto Mono',
+              }} >
               Programs offered by the department
             </Typography>
 
-            <ul >
+            <ul className={classes.program_text} >
               {data.pragrams_offered.map((item) => {
                 return (
                   <li>
-                    <Typography sx={{
-                      lineHeight: '1.7',
-                      fontSize: '18px',
-                    }}>{item}</Typography>
+                    <Typography
+                      sx={{
+                        lineHeight: '1.7',
+                        fontSize: '18px',
+                        fontFamily: 'Varela Round',
+                      }}>{item}</Typography>
                   </li>
                 )
               })}
             </ul>
 
             {/* head of the department */}
-            <Typography variant="h2" align="center">
+            <Typography
+              variant="h2"
+              align="center" marginTop={'40px'} sx={{fontFamily: 'Roboto Mono',}}>
               Head of the department
             </Typography>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}>
               <Profile people={data.head_of_department} />
             </div>
           </Grid>
         </Grid>
       </Container>
       {/* </Layout> */}
-    </div>
+    </div >
   )
 }
