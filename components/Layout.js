@@ -33,6 +33,9 @@ export default function layout({ title, description, children }) {
   const theme = createTheme({
 
     typography: {
+      fontFamily: 'Space Grotesk',
+      fontFamily: 'Varela Round',
+      fontFamily: 'Roboto Mono',
       fontFamily: 'Abel',
       button: {
         fontWeight: 'bold',
@@ -48,7 +51,34 @@ export default function layout({ title, description, children }) {
           font-display: swap;
           src: url(https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }`
+        }`,
+        styleOverrides: `
+        @font-face {
+          font-family: 'Roboto Mono';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_7Pq_SeW4Ep0.woff2) format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        `,
+        styleOverrides: `
+        @font-face {
+          font-family: 'Varela Round';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(https://fonts.gstatic.com/s/varelaround/v19/w8gdH283Tvk__Lua32TysjIfpcuPP9g.woff2) format('woff2');
+          unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+        }`,
+        styleOverrides:`@font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXsrPMBTTA.woff2) format('woff2');
+          unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }`,
       }
     }
   });
@@ -60,7 +90,10 @@ export default function layout({ title, description, children }) {
         {description && <meta name="description" content={description}></meta>}
 
         <link href="https://fonts.googleapis.com/css2?family=Abel:wght@700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+
 
 
         <link rel="icon" href="/favicon.ico" />
@@ -79,12 +112,7 @@ export default function layout({ title, description, children }) {
                 item
                 xs={12}
                 md={4}
-                display="flex"
-                sx={{
-                  padding: '10px 0px 0px 0px '
-                }}
-                
-                >
+                display="flex">
                 {showBelow900 && <IconButton
                   edge="start"
                   aria-label="open drawer"
@@ -159,7 +187,7 @@ export default function layout({ title, description, children }) {
                     </ListItem>
                   </List>
                 </Drawer>
-                
+
                 <div className={classes.firstBox}>
                   <CardMedia
                     component="img"
@@ -170,7 +198,7 @@ export default function layout({ title, description, children }) {
                       width: "120px",
                     }} />
                 </div>
-                
+
               </Grid>
 
               <Grid

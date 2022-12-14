@@ -204,17 +204,78 @@ const data = {
     `Agarwal, V., Tapaswi, S., Chanak, P., “Energy-Efficient Mobile Sink-Based Intelligent Data Routing Scheme for Wireless Sensor Networks”, IEEE Sensors Journal, 2022, 22(10), pp. 9881–9891.`,
     `Raikwar, S.C., Tapaswi, S., Chakraborty, S., “Bounding function for fast computation of transmission in single image dehazing”, Multimedia Tools and Applications, 2022, 81(4), pp. 5349–5372.`,
     `Shree, R., Shukla, A.K., Pandey, R.P., Shukla, V., Arya, K.V., “The Internet of Things in Healthcare: Benefits, Use Cases, and Major Evolutions”, Internet of Things, 2022, pp. 387–405. `,
+    `Arya, K.V., Jagadeesh, S., “Time Series Forecasting of Soil Moisture Using Satellite Images”, Communications in Computer and Information Science, 2022, 1576 CCIS, pp. 385–397.`,
+    `Singh, S., Arya, K.V., “Fibre analysis to prevent cloning of credit cards”, International Journal of Internet Technology and Secured Transactions, 2022, 12(3), pp. 237–249.`,
+    `Arya, K.V., Rajput, S.S., “Recognition of Facial Images via Self-Organizing Landmark Location with Approximate Graph Matching”, Lecture Notes in Electrical Engineering, 2022, 777, pp. 1043–1055`,
+    `Mishra, N.K., Singh, A., Singh, P.K., “Multi-label personality trait identification from text”, Multimedia Tools and Applications, 2022, 81(15), pp. 21503–21519.`,
+    `Nagar, S., Jain, A., Singh, P.K., Kumar, A., “Adaptive optimal multi-features learning based representation for face hallucination”, Expert Systems with Applications, 2022, 190, 116141.`,
+    `Mishra, N.K., Singh, P.K., “Linear Ordering Problem based Classifier Chain using Genetic Algorithm for multi-label classification”, Applied Soft Computing, 2022, 117, 108395.`,
+    `Alaparthi, V.S., Pasam, T.R., Inagandla, D.A., Prakash, J., Singh, P.K., “ScSer: Supervised Contrastive Learning for Speech Emotion Recognition using Transformers”, International Conference on Human System Interaction, HSI, 2022, 2022-July.`,
+    `Sharma, A., Arora, A., Gupta, A., Singh, P.K., “Data-Centric Approach to Hepatitis C Virus Severity Prediction”, Lecture Notes in Networks and Systems, 2022, 418 LNNS, pp. 421–431.`,
+    `Srivatsa, S., Singh, A., Singh, P.K., “Combating Depression Through the Neural Analysis of Web Behavior”, Lecture Notes in Networks and Systems, 2022, 420 LNNS, pp. 128–139.`,
+    `Jain, A., Nagar, S., Singh, P.K., Dhar, J., “ADC@Ꝋr: Adaptive divisional categorization of ratings under rating threshold Ꝋr for similarity computation in recommendation systems”, Applied Intelligence, 2022, 52(2), pp. 2134–2153.`,
+    `Garg, V., Shukla, A., Tiwari, R., “AERPSO — An adaptive exploration robotic PSO based cooperative algorithm for multiple target searching”, Expert Systems with Applications, 2022, 209, 118245.`,
+    `Garg, V., Tiwari, R., Shukla, A., Dhar, J., “A Distributed Cooperative Approach for Dynamic Target Search Using Particle Swarm Optimization with Limited Intercommunication”, Arabian Journal for Science and Engineering, 2022, 47(8), pp. 10623–10637.`,
+    `Ojha, M.K., Wadhwani, S., Wadhwani, A.K., Shukla, A., “Automatic detection of arrhythmias from an ECG signal using an auto-encoder and SVM classifier”, Physical and Engineering Sciences in Medicine, 2022, 45(2), pp. 665–674.`,
+    `Jain, S., Verma, R.K., Pattanaik, K.K., Shukla, A., “A survey on event-driven and query-driven hierarchical routing protocols for mobile sink-based wireless sensor networks”, Journal of Supercomputing, 2022, 78(9), pp. 11492–11538.`,
+    `Garg, V., Tiwari, R., Shukla, A., “Comparative Analysis of Fruit Fly-Inspired Multi-Robot Cooperative Algorithm for Target Search and Rescue”, Proceedings - 2022 IEEE World Conference on Applied Intelligence and Computing, AIC 2022, 2022, pp. 444–450.`,
+    `Mishra, P., Kumar, N., Godfrey, W.W., “An evolutionary computing-based energy-efficient solution for IoT-enabled software-defined sensor network architecture”, International Journal of Communication Systems, 2022, 35(8), e5111.`,
+    `Suji, R.J., Godfrey, W.W., Dhar, J., “Border to border distance based lung parenchyma segmentation including juxta-pleural nodules”, Multimedia Tools and Applications, 2022.`,
+    `Gauttam, H., Pattanaik, K.K., Bhadauria, S., Saxena, D., Sapna, “A cost aware topology formation scheme for latency sensitive applications in edge infrastructure-as-a-service paradigm”, Journal of Network and Computer Applications, 2022, 199, 103303.`,
+    `Sharma, O., Verma, M., Bhadauria, S., Jayachandran, P., “A Guided Approach Towards Complex Chaos Selection, Prioritisation and Injection”, IEEE International Conference on Cloud Computing, CLOUD, 2022, 2022-July, pp. 91–93.`,
+    `Rathi, P., Bhadauria, S., Rathi, S., “Watermarking of Deep Recurrent Neural Network Using Adversarial Examples to Protect Intellectual Property”, Applied Artificial Intelligence, 2022, 36(1), 2008613.`,
+    `Gauttam H., Pattanaik K. K., Bhadauria S. and Nain G., "A Data Traffic Remapping Scheme for Delay Sensitive Industrial Applications", IEEE 50th TENCON 2022.`,
+    `Singh, R., Rathore, S.S., “Linear and non-linear bayesian regression methods for software fault prediction”, International Journal of System Assurance Engineering and Management, 2022, 13(4), pp. 1864–1884.`,
+    `Rathore, S.S., Chouhan, S.S., Jain, D.K., Vachhani, A.G., “Generative Oversampling Methods for Handling Imbalanced Data in Software Fault Prediction”, IEEE Transactions on Reliability, 2022, 71(2), pp. 747–762.`,
+    `Tiwari, S., Rathore, S.S., Farooq, S.U., Patani, P., “How students are using GitHub? A survey”, ACM International Conference Proceeding Series, 2022, 26.`,
+    `Tiwari, S., Rathore, S.S., “Understanding general concepts of requirements engineering through design thinking: An experimental study with students”, Computer Applications in Engineering Education, 2022.`,
+    `Sadhya, D., Rathore, S.S., Rajput, A.S., Anand, A., “Securing multimedia videos using space-filling curves”, Multimedia Tools and Applications, 2022.`,
+    `Singh, N., Rathore, S.S., Kumar, S., “Towards a super-resolution based approach for improved face recognition in low resolution environment”, Multimedia Tools and Applications, 2022.`,
+    `Brahma, J., Sadhya, D., “Preserving Contextual Privacy for Smart Home IoT Devices With Dynamic Traffic Shaping”, IEEE Internet of Things Journal, 2022, 9(13), pp. 11434–11441.`,
+    `Goel, R., Singh, U., Sadhya, D., “Privacy Preserving Contact Tracing using Ethereum Blockchain Network”, 2022 IEEE Region 10 Symposium, TENSYMP 2022, 2022.`,
+    `Sadhya, D., Chakraborty, B., “Quantifying the Effects of Anonymization Techniques over Micro-databases”, IEEE Transactions on Emerging Topics in Computing, 2022.`
   ],
   outreach_activities: [
     `Prof. Shashikala Tapaswi and Prof. Joydip Dhar organized a two-day workshop in online mode on “Cyber Security Technologies and Applications 2022” under the ISEA Phase-II project during June 1-2, 2022.`,
     `Prof Aditya Trivedi and Dr. W Wilfred Godfrey organized a two day workshop sponsored by SERB-DST project on “Industrial and Domestic Monitoring and Control using Decentralized Cyber Physical System” at ABV-IIITM Gwalior during March 11-12, 2022.`,
     `Dr. Binod Prasad and Dr. Debanjan Sadhya conducted a five days workshop sponsored by TIIC, ABV-IIITM Gwalior (under TIDE 2.0) on “Innovations in IoT for Emerging Applications” at ABV-IIITM Gwalior in online mode during February 12-16, 2022. `,
     `Dr. Santosh Singh Rathore and Dr. Vinal Patel conducted a five days workshop sponsored by TIIC, ABV-IIITM Gwalior (under TIDE 2.0) on “Enterprise Applications Development, Reliability, and Security” at ABV-IIITM Gwalior in online mode during February 5-9, 2022.`,
+    `Dr. Vinal Patel and Dr. Santosh Singh Rathore conducted a five days workshop sponsored by TIIC, ABV-IIITM Gwalior (under TIDE 2.0) on “Enterprise Healthcare System & Solution” at ABV-IIITM Gwalior in online mode during January 15-19, 2022.`,
+    `Dr Saumya Bhadauria delivered an expert talk on “Malware Analysis for Industrial Control Systems” at a workshop on Cyber Security Technologies and Applications CSTA-2022, ABV-IIITM, Gwalior.`
+  ],
+  miscellaneous: [
+    `Patent Number: 404853  Granted on  “System for Indoor position tracking and associated method” dated 29/8/2022 (Deepti Maduskar and Prof. Shashikala Tapaswi)`,
   ],
   future_plans: [
-    `Workshop entitled “Artificial Intelligence Techniques for Reliability and Security Analysis of Software Systems” has been sanctioned by SERB-DST under the Karyashala scheme. The workshop will be organized and conducted by Dr. Santosh Singh Rathore.`,
-    `FDP program entitled “Application of Blockchain, Artificial Intelligence and IoT” has been sanctioned by AICTE under the ATAL program. The FDP will be organized and conducted by Prof. Aditya Trivedi and Dr. W Wilfred Godfrey.`,
-    `It has been proposed to establish a Centre of Excellence (COE) in the thrust areas. The constitution of the COE would be discussed with experienced personnel from industry and academia.`,
+    {
+      data: `Workshop entitled “Artificial Intelligence Techniques for Reliability and Security Analysis of Software Systems” has been sanctioned by SERB-DST under the Karyashala scheme. The workshop will be organized and conducted by Dr. Santosh Singh Rathore.`,
+      points: [],
+    },
+    {
+      data: `FDP program entitled “Application of Blockchain, Artificial Intelligence and IoT” has been sanctioned by AICTE under the ATAL program. The FDP will be organized and conducted by Prof. Aditya Trivedi and Dr. W Wilfred Godfrey.`,
+      points: [],
+    },
+    {
+      data: `It has been proposed to establish a Centre of Excellence (COE) in the thrust areas. The constitution of the COE would be discussed with experienced personnel from industry and academia.`,
+      points: [],
+    },
+    {
+      text: `The following Teaching Laboratories are being planned to be set up for the department.`,
+      points: [
+        `Two Generic computing laboratories of 50 computers each (GCL-1 and GCL-2)`,
+        `One PG laboratory of 20 computers (PGL)`,
+        `One PhD student workspace with 20 computers (PhDL)`
+      ]
+    },
+    {
+      text: `The following Research Laboratories are being planned for the department.`,
+      points: [
+        `Secured Computing Lab`,
+        `Machine Learning and Soft Computing Lab`,
+        `Artificial Intelligence and Robotics Lab`,
+        `Software Engineering Lab`,
+      ]
+    }
   ],
 }
 export default data
