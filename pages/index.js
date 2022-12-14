@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import data from "./api/data"
 import createTheme from "@mui/material"
 import Profile from "../components/Profile"
+import news from "./api/news"
 export default function Home(props) {
   const router = useRouter()
 
@@ -32,6 +33,11 @@ export default function Home(props) {
               <Typography variant="h3" className={classes.news_heading} align="center">
                 News Section
               </Typography>
+              <ul>
+                {news.map((item) => {
+                  return <li style={{ fontFamily: "Bell MT", textAlign: "justify", marginTop: "50px", fontSize: "18px", lineHeight: "2" }}>{item}</li>
+                })}
+              </ul>
             </div>
           </Grid>
           <Grid item xs={12}>
