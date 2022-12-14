@@ -4,23 +4,15 @@ import { useState } from "react"
 import Head from "next/head"
 
 import { Divider, Drawer, CardMedia, createTheme, ThemeProvider, useMediaQuery } from "@mui/material"
-import IconButton from "@mui/material/IconButton";
+import IconButton from "@mui/material/IconButton"
 
-import {
-  AppBar,
-  Button,
-  Container, Grid, List, ListItem, Typography
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Button, Container, Grid, List, ListItem, Typography } from "@mui/material"
+import MenuIcon from "@mui/icons-material/Menu"
 
-import classes from "./../styles/Home.module.css";
-import data from "../pages/api/data";
-
-
-
+import classes from "./../styles/Home.module.css"
+import data from "../pages/api/data"
+import links from "../pages/api/links"
 export default function layout({ title, description, children }) {
-
-
   const [sidbarVisible, setSidebarVisible] = useState(false)
   const sidebarOpenHandler = () => {
     setSidebarVisible(true)
@@ -31,15 +23,14 @@ export default function layout({ title, description, children }) {
 
   const router = useRouter()
   const theme = createTheme({
-
     typography: {
-      fontFamily: 'Space Grotesk',
-      fontFamily: 'Varela Round',
-      fontFamily: 'Roboto Mono',
-      fontFamily: 'Abel',
+      fontFamily: "Space Grotesk",
+      fontFamily: "Varela Round",
+      fontFamily: "Roboto Mono",
+      fontFamily: "Abel",
       button: {
-        fontWeight: 'bold',
-      }
+        fontWeight: "bold",
+      },
     },
     components: {
       MuiCssBaseline: {
@@ -71,7 +62,7 @@ export default function layout({ title, description, children }) {
           src: url(https://fonts.gstatic.com/s/varelaround/v19/w8gdH283Tvk__Lua32TysjIfpcuPP9g.woff2) format('woff2');
           unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
         }`,
-        styleOverrides:`@font-face {
+        styleOverrides: `@font-face {
           font-family: 'Space Grotesk';
           font-style: normal;
           font-weight: 500;
@@ -79,10 +70,10 @@ export default function layout({ title, description, children }) {
           src: url(https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXsrPMBTTA.woff2) format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
         }`,
-      }
-    }
-  });
-  const showBelow900 = useMediaQuery(theme.breakpoints.down('md'));
+      },
+    },
+  })
+  const showBelow900 = useMediaQuery(theme.breakpoints.down("md"))
   return (
     <div>
       <Head>
@@ -94,111 +85,62 @@ export default function layout({ title, description, children }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
 
-
-
         <link rel="icon" href="/favicon.ico" />
-
       </Head>
 
       <div className={classes.box}>
         <ThemeProvider theme={theme}>
-
           <AppBar position="static" className={classes.appBar}>
-            <Grid
-              container
-              spacing={3}
-              justifyContent="center">
-              <Grid
-                item
-                xs={12}
-                md={4}
-                display="flex">
-                {showBelow900 && <IconButton
-                  edge="start"
-                  aria-label="open drawer"
-                  onClick={sidebarOpenHandler}
-                  className={classes.menuButton}
-                  sx={{
-                    margin: 'auto 10px auto 0px'
-
-                  }}
-                >
-                  <MenuIcon
+            <Grid container spacing={3} justifyContent="center">
+              <Grid item xs={12} md={4} display="flex">
+                {showBelow900 && (
+                  <IconButton
+                    edge="start"
+                    aria-label="open drawer"
                     onClick={sidebarOpenHandler}
-                    className={classes.navbarButton} />
-                </IconButton>}
+                    className={classes.menuButton}
+                    sx={{
+                      margin: "auto 10px auto 0px",
+                    }}
+                  >
+                    <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
+                  </IconButton>
+                )}
                 <Drawer anchor="left" open={sidbarVisible} onClose={sidebarCloseHandler}>
                   <List>
                     <ListItem>
-                      <Container
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="space-between">
-                        <Typography>
-                          Sidebar panel
-                        </Typography>
-                        <IconButton
-                          aria-label="close"
-                          onClick={sidebarCloseHandler}></IconButton>
+                      <Container display="flex" alignItems="center" justifyContent="space-between">
+                        {/* <Typography>Sidebar panel</Typography> */}
+                        <IconButton aria-label="close" onClick={sidebarCloseHandler}></IconButton>
                       </Container>
                     </ListItem>
                     <Divider light />
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/")}
-                        className={classes.navLink} >
-                        Home
-                      </Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/people")}
-                        className={classes.navLink} >
-                        People
-                      </Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/research")}
-                        className={classes.navLink} >
-                        Research
-                      </Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/labs")}
-                        className={classes.navLink} >
-                        Labs
-                      </Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/programs")}
-                        className={classes.navLink} >
-                        Programs
-                      </Button>
-                    </ListItem>
-                    <ListItem>
-                      <Button
-                        onClick={() => router.push("/events")}
-                        className={classes.navLink}>
-                        Events
-                      </Button>
-                    </ListItem>
+                    {links.map((item) => {
+                      return (
+                        <ListItem>
+                          <Button onClick={() => router.push(`${item.path}`)} className={classes.navLink}>
+                            {item.name}
+                          </Button>
+                        </ListItem>
+                      )
+                    })}
                   </List>
                 </Drawer>
 
                 <div className={classes.firstBox}>
                   <CardMedia
                     component="img"
-                    image="/static/images/iiitm.png"
+                    image="/static/images/iiitm_logo.png"
                     alt="IIITM"
                     style={{
                       height: "120px",
-                      width: "120px",
-                    }} />
+                      width: "320px",
+                      // backgroundSize: "100% 100%",
+                      objectFit: "contain",
+                      // border: "1px solid red",
+                    }}
+                  />
                 </div>
-
               </Grid>
 
               <Grid
@@ -211,85 +153,26 @@ export default function layout({ title, description, children }) {
                 }}
               >
                 <div className={classes.secondBox}>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Home
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/people")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    People
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/research")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Research
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/labs")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Labs
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/programs")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Programs
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/publications")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Publications
-                  </Typography>
-                  <Typography
-                    className={classes.secondBox_menu}
-                    onClick={() => router.push("/events")}
-                    sx={{
-                      margin: "auto 27px",
-                    }}
-                  >
-                    Events
-                  </Typography>
+                  {links.map((item) => {
+                    return (
+                      <Typography
+                        className={classes.secondBox_menu}
+                        onClick={() => router.push(`${item.path}`)}
+                        sx={{
+                          margin: "auto 27px",
+                        }}
+                      >
+                        {item.name}
+                      </Typography>
+                    )
+                  })}
                 </div>
               </Grid>
-              {/* <Grid item xs={4} justifyContent="flex-end">
-              <div className={classes.thirdBox}>
-                <Button onClick={() => router.push("/signin")} color="inherit">
-                  Login
-                </Button>
-              </div>
-            </Grid> */}
             </Grid>
           </AppBar>
 
           {children}
-
         </ThemeProvider>
-
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
@@ -307,51 +190,30 @@ export default function layout({ title, description, children }) {
           </Grid>
           <Grid container sm={8} className={classes.footerGridCon}>
             <Grid item xs={3} className={classes.footerGridItem2}>
-              <List>
-                <ListItem>Other Pages</ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/people")}>
-                  People
-                </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/research")}>
-                  research
-                </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/labs")}>
-                  labs
-                </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/programs")}>
-                  Programs
-                </ListItem>
-                <ListItem
-                  className={classes.footerGridItem2}
-                  onClick={() => router.push("/events")} >
-                  Events
-                </ListItem>
-              </List>
+              {links.map((item) => {
+                return (
+                  <Typography
+                    onClick={() => router.push(`${item.path}`)}
+                    sx={{
+                      margin: "auto 27px",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                )
+              })}
             </Grid>
           </Grid>
-
         </Grid>
 
         <hr />
-        <Typography
-          textAlign="end"
-          style={{ padding: "10px 0 10px 0" }}>
+        <Typography textAlign="end" style={{ padding: "10px 0 10px 0" }}>
           Developed by{" "}
-          <a href="https://www.linkedin.com/in/sohan-bandary/"
-            className={classes.link} target="_blank">
+          <a href="https://www.linkedin.com/in/sohan-bandary/" className={classes.link} target="_blank">
             Sohan Bandary
           </a>{" "}
           and{" "}
-          <a href="https://www.linkedin.com/in/yana-gupta/"
-            className={classes.link} target="_blank">
+          <a href="https://www.linkedin.com/in/yana-gupta/" className={classes.link} target="_blank">
             Yana Gupta
           </a>
         </Typography>

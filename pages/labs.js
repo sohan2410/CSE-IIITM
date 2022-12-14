@@ -11,11 +11,11 @@ import data from "./api/data"
 
 const labs = () => {
   return (
-    <div>
+    <div style={{ height: "100vh", paddingTop: "50px", paddingLeft: "5px" }}>
       <Head>
         <title>Labs</title>
       </Head>
-      <TableContainer component={Paper} style={{ margin: "50px 0px 50px 5px" }}>
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="sticky table" stickyHeader>
           <TableHead>
             <TableRow>
