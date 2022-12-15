@@ -61,8 +61,12 @@ export default function Home(props) {
                 News Section
               </Typography>
               <ul>
-                {news.map((item) => {
-                  return <li style={{ fontFamily: "Bell MT", textAlign: "justify", marginTop: "50px", fontSize: "18px", lineHeight: "2" }}>{item}</li>
+                {news.map((item, i) => {
+                  return (
+                    <li key={i} style={{ fontFamily: "Bell MT", textAlign: "justify", marginTop: "50px", fontSize: "18px", lineHeight: "2" }}>
+                      {item}
+                    </li>
+                  )
                 })}
               </ul>
             </div>
@@ -101,9 +105,9 @@ export default function Home(props) {
               Mission
             </Typography>
             <ul className={classes.mission_text}>
-              {data.mission.map((item) => {
+              {data.mission.map((item, i) => {
                 return (
-                  <li>
+                  <li key={i}>
                     <Typography
                       sx={{
                         lineHeight: "1.7",
@@ -131,9 +135,9 @@ export default function Home(props) {
             </Typography>
 
             <ul className={classes.program_text}>
-              {data.pragrams_offered.map((item) => {
+              {data.pragrams_offered.map((item, i) => {
                 return (
-                  <li>
+                  <li key={i}>
                     <Typography
                       sx={{
                         lineHeight: "1.7",

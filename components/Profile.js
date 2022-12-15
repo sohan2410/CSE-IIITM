@@ -8,11 +8,12 @@ import classes from "../styles/Home.module.css"
 const Profile = ({ people }) => {
   return (
     <Card
-      sx={{ width: '370px', height: '560px' }}
+      sx={{ width: "370px", height: "560px" }}
       style={{
         margin: "20px",
-        boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)"
-      }}>
+        boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
+      }}
+    >
       <CardMedia
         component="img"
         image={people.image}
@@ -20,38 +21,42 @@ const Profile = ({ people }) => {
         style={{
           display: "block",
           magrin: "0 auto",
-          height: '310px'
-        }} />
-      <CardContent
-        sx={{ height: '210px', }}>
-        <Typography gutterBottom
+          height: "310px",
+        }}
+      />
+      <CardContent sx={{ height: "210px" }}>
+        <Typography
+          gutterBottom
           variant="h5"
           component="div"
           textAlign="center"
           margin={"0px auto 6px auto"}
           sx={{
-            fontFamily: 'Varela Round',
-            fontWeight: 'bold'
-          }}>
+            fontFamily: "Varela Round",
+            fontWeight: "bold",
+          }}
+        >
           {people.name}
         </Typography>
-        <Typography
-          variant="body1"
-          textAlign="center" sx={{ fontFamily: 'Space Grotesk' }}>
+        <Typography variant="body1" textAlign="center" sx={{ fontFamily: "Space Grotesk" }}>
           {people.designation}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          <span style={{ fontWeight: "bold", fontFamily: 'Space Grotesk' }}>Area of Interest: </span>
-          {people.area_of_interest.map((aoi) => {
-            return <Typography variant="span" style={{ fontFamily: 'Space Grotesk' }}>{aoi}, </Typography>
+          <span style={{ fontWeight: "bold", fontFamily: "Space Grotesk" }}>Area of Interest: </span>
+          {people.area_of_interest.map((aoi, i) => {
+            return (
+              <Typography key={i} variant="span" style={{ fontFamily: "Space Grotesk" }}>
+                {aoi},{" "}
+              </Typography>
+            )
           })}
         </Typography>
-        <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Space Grotesk' }}>
-          <span style={{ fontWeight: "bold", fontFamily: 'Space Grotesk' }}>Office Phone:</span>
+        <Typography variant="body2" color="text.secondary" style={{ fontFamily: "Space Grotesk" }}>
+          <span style={{ fontWeight: "bold", fontFamily: "Space Grotesk" }}>Office Phone:</span>
           {people.office_phone}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Space Grotesk' }}>
-          <span style={{ fontWeight: "bold", fontFamily: 'Space Grotesk' }}>Address:</span> {people.address}
+        <Typography variant="body2" color="text.secondary" sx={{ fontFamily: "Space Grotesk" }}>
+          <span style={{ fontWeight: "bold", fontFamily: "Space Grotesk" }}>Address:</span> {people.address}
         </Typography>
       </CardContent>
 
@@ -59,7 +64,7 @@ const Profile = ({ people }) => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          height: '40px'
+          height: "40px",
         }}
       >
         <Link href={`mailto:${people.email}`} target="_blank">

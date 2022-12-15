@@ -15,8 +15,8 @@ export default function people() {
         People
       </Typography> */}
       <Grid container spacing={0} direction="row" alignItems="center" justifyContent="center" style={{ minHeight: "100vh" }} padding={2}>
-        {data.faculty_members_of_the_department.map((people, key) => {
-          return <Profile people={people} />
+        {data.faculty_members_of_the_department.map((people, i) => {
+          return <Profile people={people} key={i} />
         })}
       </Grid>
     </div>

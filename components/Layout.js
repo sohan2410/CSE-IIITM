@@ -1,24 +1,20 @@
-import React, { useContext } from "react"
+import React, { useState } from "react"
 import { useRouter } from "next/router"
-import { useState } from "react"
 import Head from "next/head"
-
 import { Divider, Drawer, CardMedia, createTheme, ThemeProvider, useMediaQuery } from "@mui/material"
 import IconButton from "@mui/material/IconButton"
-
 import { AppBar, Button, Container, Grid, List, ListItem, Typography } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
-
 import classes from "./../styles/Home.module.css"
 import data from "../pages/api/data"
 import links from "../pages/api/links"
-export default function layout({ title, description, children }) {
-  const [sidbarVisible, setSidebarVisible] = useState(false)
+export default function Layout({ title, description, children }) {
+  const [SidebarVisible, SetSidebarVisible] = useState(false)
   const sidebarOpenHandler = () => {
-    setSidebarVisible(true)
+    SetSidebarVisible(true)
   }
   const sidebarCloseHandler = () => {
-    setSidebarVisible(false)
+    SetSidebarVisible(false)
   }
 
   const router = useRouter()
@@ -83,25 +79,20 @@ export default function layout({ title, description, children }) {
     },
   })
   const showBelow900 = useMediaQuery(theme.breakpoints.down(1000))
-  const showAbove900 = useMediaQuery(theme.breakpoints.up(1000));
+  const showAbove900 = useMediaQuery(theme.breakpoints.up(1000))
   return (
     <div>
       <Head>
         <title>{title ? `${title} - Landing Page` : "Landing page"}</title>
         {description && <meta name="description" content={description}></meta>}
 
-        <link href="https://fonts.googleapis.com/css2?family=Abel:wght@700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={classes.box}>
         <ThemeProvider theme={theme}>
           <AppBar position="static" className={classes.appBar}>
-            <Grid container spacing={3} >
+            <Grid container spacing={3}>
               <Grid item xs={12} md={4} display="flex">
                 {showBelow900 && (
                   <IconButton
@@ -116,7 +107,7 @@ export default function layout({ title, description, children }) {
                     <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
                   </IconButton>
                 )}
-                <Drawer anchor="left" open={sidbarVisible} onClose={sidebarCloseHandler}>
+                <Drawer anchor="left" open={SidebarVisible} onClose={sidebarCloseHandler}>
                   <List>
                     <ListItem>
                       <Container display="flex" alignItems="center" justifyContent="space-between">
@@ -125,9 +116,9 @@ export default function layout({ title, description, children }) {
                       </Container>
                     </ListItem>
                     <Divider light />
-                    {links.map((item) => {
+                    {links.map((item, i) => {
                       return (
-                        <ListItem>
+                        <ListItem key={i}>
                           <Button onClick={() => router.push(`${item.path}`)} className={classes.navLink}>
                             {item.name}
                           </Button>
@@ -150,33 +141,36 @@ export default function layout({ title, description, children }) {
                 </div>
               </Grid>
 
-              {showAbove900 && <Grid
-                item
-                md={8}
-                spacing={3}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <div className={classes.secondBox}>
-                  {links.map((item) => {
-                    return (
-                      <Typography
-                        className={classes.secondBox_menu}
-                        onClick={() => router.push(`${item.path}`)}
-                        sx={{
-                          margin: "auto 23px",
-                          fontFamily: "Prompt",
-                          letterSpacing: "1.1px"
-                        }}
-                      >
-                        {item.name}
-                      </Typography>
-                    )
-                  })}
-                </div>
-              </Grid>}
+              {showAbove900 && (
+                <Grid
+                  item
+                  md={8}
+                  spacing={3}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div className={classes.secondBox}>
+                    {links.map((item, i) => {
+                      return (
+                        <Typography
+                          key={i}
+                          className={classes.secondBox_menu}
+                          onClick={() => router.push(`${item.path}`)}
+                          sx={{
+                            margin: "auto 23px",
+                            fontFamily: "Prompt",
+                            letterSpacing: "1.1px",
+                          }}
+                        >
+                          {item.name}
+                        </Typography>
+                      )
+                    })}
+                  </div>
+                </Grid>
+              )}
             </Grid>
           </AppBar>
 
@@ -185,7 +179,7 @@ export default function layout({ title, description, children }) {
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
-          <Grid item xs={8} sm={6} md={4} sx={{padding: 'auto 20px'}}>
+          <Grid item xs={8} sm={6} md={4} sx={{ padding: "auto 20px" }}>
             {/* <List style={{ alignItems: "start" }}> */}
             <Typography variant="h5" gutterBottom>
               Contact:
@@ -198,10 +192,11 @@ export default function layout({ title, description, children }) {
             {/* </List> */}
           </Grid>
           <Grid container xs={4} sm={6} md={8} className={classes.footerGridCon}>
-            <Grid item xs={3} sx={{padding: 'auto 20px'}}  className={classes.footerGridConItem}>
-              {links.map((item) => {
+            <Grid item xs={3} sx={{ padding: "auto 20px" }} className={classes.footerGridConItem}>
+              {links.map((item, i) => {
                 return (
                   <Typography
+                    key={i}
                     onClick={() => router.push(`${item.path}`)}
                     sx={{
                       margin: "5px 10px",
@@ -219,11 +214,11 @@ export default function layout({ title, description, children }) {
         <hr />
         <Typography textAlign="end" style={{ padding: "10px 0 10px 0" }}>
           Developed by{" "}
-          <a href="https://www.linkedin.com/in/sohan-bandary/" className={classes.link} target="_blank">
+          <a href="https://www.linkedin.com/in/sohan-bandary/" className={classes.link} target="_blank" rel="noreferrer">
             Sohan Bandary
           </a>{" "}
           and{" "}
-          <a href="https://www.linkedin.com/in/yana-gupta/" className={classes.link} target="_blank">
+          <a href="https://www.linkedin.com/in/yana-gupta/" className={classes.link} target="_blank" rel="noreferrer">
             Yana Gupta
           </a>
         </Typography>
