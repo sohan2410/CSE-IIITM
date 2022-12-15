@@ -16,27 +16,30 @@ const labs = () => {
         <title>Labs</title>
       </Head>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="sticky table" stickyHeader>
+        <Table sx={{
+          minWidth: 650,
+          fontFamily: "Varela Round"
+        }} aria-label="sticky table" stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell style={{ fontWeight: "bold" }}>Sl No.</TableCell>
-              <TableCell style={{ fontWeight: "bold" }}>Laboratory Name</TableCell>
-              <TableCell style={{ fontWeight: "bold" }}>Location</TableCell>
-              <TableCell style={{ fontWeight: "bold" }}>Faculty-in-charge</TableCell>
-              <TableCell style={{ fontWeight: "bold" }}>Facilities</TableCell>
+              <TableCell style={{ fontWeight: "bold", fontFamily: "Varela Round" }}>S No.</TableCell>
+              <TableCell style={{ fontWeight: "bold", fontFamily: "Varela Round" }}>Laboratory Name</TableCell>
+              <TableCell style={{ fontWeight: "bold", fontFamily: "Varela Round" }}>Location</TableCell>
+              <TableCell style={{ fontWeight: "bold", fontFamily: "Varela Round" }}>Faculty-in-charge</TableCell>
+              <TableCell style={{ fontWeight: "bold", fontFamily: "Varela Round" }}>Facilities</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.labs.map((lab) => {
               return (
                 <TableRow key={lab.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" sx={{ fontFamily: "Varela Round"}}>
                     {lab.id}
                   </TableCell>
-                  <TableCell>{lab.laboratory_name}</TableCell>
-                  <TableCell>{lab.location}</TableCell>
-                  <TableCell>{lab.faculty_in_charge}</TableCell>
-                  <TableCell>{lab.facilities}</TableCell>
+                  <TableCell sx={{ fontFamily: "Varela Round"}}>{lab.laboratory_name}</TableCell>
+                  <TableCell sx={{ fontFamily: "Varela Round"}}>{lab.location}</TableCell>
+                  <TableCell sx={{ fontFamily: "Varela Round"}}>{lab.faculty_in_charge}</TableCell>
+                  <TableCell sx={{ fontFamily: "Varela Round"}}>{lab.facilities}</TableCell>
                 </TableRow>
               )
             })}

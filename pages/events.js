@@ -8,7 +8,7 @@ const events = () => {
       <Head>
         <title>Events</title>
       </Head>
-      <Typography textAlign="center" variant="h5">
+      <Typography textAlign="center" variant="h4" component="h2" sx={{ fontWeight: "bold", fontFamily: "Roboto Mono" }}  >
         To be Announced...
       </Typography>
     </div>

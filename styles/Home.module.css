@@ -1,6 +1,5 @@
 .box {
   width: 100%;
-  /* min-height: 100vh; */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -23,8 +22,8 @@
 .appBar {
   background-color: #f8fbff;
   color: #120521;
-  height: 5vh;
-  padding: 2rem 4rem 2rem 1rem;
+  height: 72px;
+  padding: 6px 10px 4px 10px;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -34,7 +33,21 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 400px) {
+  .firstBox{
+    margin-left: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 350px) {
+  .firstBox{
+    margin-left: 0px;
+  }
+  
 }
 
 .secondBox {
@@ -106,15 +119,19 @@
 }
 
 .footerGridCon {
+  padding: auto;
   display: flex;
   justify-content: start;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .footerGridCon {
-    display: none;
+@media screen and (max-width: 600px) {
+  .footerGridCon{
+    margin-top: 20px;
+    margin-left: 10x;
   }
+
 }
+
 
 .footerGridItem2 {
   cursor: pointer;
@@ -392,6 +409,7 @@
 .sec2GridT2 {
   text-align: center;
 }
+
 .section3 {
   background-color: white;
   min-height: 80vh;
@@ -710,10 +728,11 @@
   padding: 2rem 1rem 2rem 1rem;
 }
 
-.mission_text{
+.mission_text {
   margin-bottom: 80px;
 }
-.program_text{
+
+.program_text {
   margin-top: 20px;
   margin-bottom: 80px;
 }
@@ -753,11 +772,11 @@
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1024px){
-  .intro_box{
+@media screen and (min-width: 1024px) {
+  .intro_box {
     margin-bottom: 100px;
   }
-  
+
 }
 
 
@@ -766,6 +785,7 @@
   .container {
     padding: 5px 60px;
   }
+
   .intro_box {
     height: 100%;
     display: flex;
@@ -790,7 +810,7 @@
 }
 
 @media screen and (max-width: 799.5px) {
-  
+
   .intro_heading {
     font-size: 55px;
     text-align: center;
@@ -816,6 +836,7 @@
   .news_box {
     margin-top: 0px;
   }
+
   .intro_text {
     font-size: 0.93rem;
   }
@@ -825,7 +846,7 @@
   .container {
     padding: 5px 40px;
   }
-  
+
   .intro_heading {
     margin-top: 10px;
   }
@@ -835,9 +856,9 @@
   .container {
     padding: 5px 30px;
   }
- 
 
-  
+
+
 }
 
 @media screen and (max-width: 433.5px) {
@@ -854,20 +875,20 @@
   .container {
     padding: 5px 0px;
   }
-  
+
 
   .intro_heading {
     font-size: 39px;
   }
+
   .intro_text {
     font-size: 0.83rem;
   }
 }
 
 @media screen and (max-width: 340px) {
-  
+
   .intro_heading {
     font-size: 36px;
   }
 }
-

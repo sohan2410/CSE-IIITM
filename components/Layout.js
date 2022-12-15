@@ -27,6 +27,7 @@ export default function layout({ title, description, children }) {
       fontFamily: "Space Grotesk",
       fontFamily: "Varela Round",
       fontFamily: "Roboto Mono",
+      fontFamily: "Prompt",
       fontFamily: "Abel",
       button: {
         fontWeight: "bold",
@@ -70,10 +71,19 @@ export default function layout({ title, description, children }) {
           src: url(https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXsrPMBTTA.woff2) format('woff2');
           unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
         }`,
+        styleOverrides: `@font-face {
+          font-family: 'Prompt';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(https://fonts.gstatic.com/s/prompt/v10/-W__XJnvUD7dzB2KdNodVkI.woff2) format('woff2');
+          unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+        }`,
       },
     },
   })
-  const showBelow900 = useMediaQuery(theme.breakpoints.down("md"))
+  const showBelow900 = useMediaQuery(theme.breakpoints.down(1000))
+  const showAbove900 = useMediaQuery(theme.breakpoints.up(1000));
   return (
     <div>
       <Head>
@@ -84,14 +94,14 @@ export default function layout({ title, description, children }) {
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
-
+        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={classes.box}>
         <ThemeProvider theme={theme}>
           <AppBar position="static" className={classes.appBar}>
-            <Grid container spacing={3} justifyContent="center">
+            <Grid container spacing={3} >
               <Grid item xs={12} md={4} display="flex">
                 {showBelow900 && (
                   <IconButton
@@ -100,7 +110,7 @@ export default function layout({ title, description, children }) {
                     onClick={sidebarOpenHandler}
                     className={classes.menuButton}
                     sx={{
-                      margin: "auto 10px auto 0px",
+                      margin: "auto 4px auto 0px",
                     }}
                   >
                     <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
@@ -126,24 +136,21 @@ export default function layout({ title, description, children }) {
                     })}
                   </List>
                 </Drawer>
-
                 <div className={classes.firstBox}>
                   <CardMedia
                     component="img"
                     image="/static/images/iiitm_logo.png"
                     alt="IIITM"
                     style={{
-                      height: "120px",
-                      width: "320px",
-                      // backgroundSize: "100% 100%",
+                      height: "60px",
+                      width: "300px",
                       objectFit: "contain",
-                      // border: "1px solid red",
                     }}
                   />
                 </div>
               </Grid>
 
-              <Grid
+              {showAbove900 && <Grid
                 item
                 md={8}
                 spacing={3}
@@ -159,7 +166,9 @@ export default function layout({ title, description, children }) {
                         className={classes.secondBox_menu}
                         onClick={() => router.push(`${item.path}`)}
                         sx={{
-                          margin: "auto 27px",
+                          margin: "auto 23px",
+                          fontFamily: "Prompt",
+                          letterSpacing: "1.1px"
                         }}
                       >
                         {item.name}
@@ -167,7 +176,7 @@ export default function layout({ title, description, children }) {
                     )
                   })}
                 </div>
-              </Grid>
+              </Grid>}
             </Grid>
           </AppBar>
 
@@ -176,7 +185,7 @@ export default function layout({ title, description, children }) {
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
-          <Grid item sm={4}>
+          <Grid item xs={8} sm={6} md={4} sx={{padding: 'auto 20px'}}>
             {/* <List style={{ alignItems: "start" }}> */}
             <Typography variant="h5" gutterBottom>
               Contact:
@@ -188,15 +197,16 @@ export default function layout({ title, description, children }) {
             <Typography>Phone: {data.head_of_department.office_phone}</Typography>
             {/* </List> */}
           </Grid>
-          <Grid container sm={8} className={classes.footerGridCon}>
-            <Grid item xs={3} className={classes.footerGridItem2}>
+          <Grid container xs={4} sm={6} md={8} className={classes.footerGridCon}>
+            <Grid item xs={3} sx={{padding: 'auto 20px'}}  className={classes.footerGridConItem}>
               {links.map((item) => {
                 return (
                   <Typography
                     onClick={() => router.push(`${item.path}`)}
                     sx={{
-                      margin: "auto 27px",
+                      margin: "5px 10px",
                     }}
+                    className={classes.footerGridItem2}
                   >
                     {item.name}
                   </Typography>

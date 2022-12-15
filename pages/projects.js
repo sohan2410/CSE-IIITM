@@ -8,11 +8,11 @@ const projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <Typography textAlign="center" variant="h5">
+      <Typography textAlign="center" variant="h4" component="h2" sx={{ fontWeight: "bold", fontFamily: "Roboto Mono" }} >
         Projects
       </Typography>
       {data.sponsored_projects.map((item, key) => {
-        return <Typography margin={5}>{`${key + 1}. ${item}`}</Typography>
+        return <Typography margin={4} sx={{ fontFamily: "Varela Round" }}>{`${key + 1}. ${item}`}</Typography>
       })}
     </div>
   )
