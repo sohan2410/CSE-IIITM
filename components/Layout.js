@@ -91,7 +91,7 @@ export default function Layout({ title, description, children }) {
 
       <div className={classes.box}>
         <ThemeProvider theme={theme}>
-          <AppBar position="static" className={classes.appBar}>
+          <AppBar position="static" className={classes.appBar} sx={{background: '#fff'}}>
             <Grid container spacing={3}>
               <Grid item xs={12} md={4} display="flex">
                 {showBelow900 && (
