@@ -16,7 +16,6 @@ export default function Home() {
         <Grid
           container
           spacing={3}
-          // padding={'10px 60px'}
           className={classes.container}
         >
           <Grid item xs={12} md={8} className={classes.intro_box}>
