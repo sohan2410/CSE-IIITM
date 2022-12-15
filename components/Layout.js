@@ -110,7 +110,7 @@ export default function layout({ title, description, children }) {
                     onClick={sidebarOpenHandler}
                     className={classes.menuButton}
                     sx={{
-                      margin: "auto 10px auto 0px",
+                      margin: "auto 4px auto 0px",
                     }}
                   >
                     <MenuIcon onClick={sidebarOpenHandler} className={classes.navbarButton} />
@@ -143,7 +143,7 @@ export default function layout({ title, description, children }) {
                     alt="IIITM"
                     style={{
                       height: "60px",
-                      width: "320px",
+                      width: "300px",
                       objectFit: "contain",
                     }}
                   />
@@ -185,7 +185,7 @@ export default function layout({ title, description, children }) {
       </div>
       <footer className={classes.footer}>
         <Grid className={classes.footerGridCon} container spacing={2}>
-          <Grid item sm={4}>
+          <Grid item xs={8} sm={6} md={4} sx={{padding: 'auto 20px'}}>
             {/* <List style={{ alignItems: "start" }}> */}
             <Typography variant="h5" gutterBottom>
               Contact:
@@ -197,14 +197,14 @@ export default function layout({ title, description, children }) {
             <Typography>Phone: {data.head_of_department.office_phone}</Typography>
             {/* </List> */}
           </Grid>
-          <Grid container sm={8} className={classes.footerGridCon}>
-            <Grid item xs={3} >
+          <Grid container xs={4} sm={6} md={8} className={classes.footerGridCon}>
+            <Grid item xs={3} sx={{padding: 'auto 20px'}}  className={classes.footerGridConItem}>
               {links.map((item) => {
                 return (
                   <Typography
                     onClick={() => router.push(`${item.path}`)}
                     sx={{
-                      margin: "auto 27px",
+                      margin: "5px 10px",
                     }}
                     className={classes.footerGridItem2}
                   >

@@ -4,10 +4,7 @@ import { Container } from "@mui/material";
 
 const MyCarousel = () => {
   return (
-    <Container sx={{
-      height: '280px',
-      padding: '20px 0px 20px 0px'
-    }}>
+    <Container sx={{padding: '16px 0px 0px 0px'}}>
       <Carousel style={{ margin: 'auto' }}>
         <Carousel.Item>
           <img className="d-block w-100" src="/static/images/carousel1.jpg" alt="First slide" />
