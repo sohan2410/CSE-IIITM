@@ -1,15 +1,12 @@
 import Head from "next/head"
 import classes from "../styles/Home.module.css"
-import { Button, Checkbox, Container, Grid, Input, List, ListItem, Typography, Box } from "@mui/material"
+import { Container, Grid, Typography } from "@mui/material"
 import { useRouter } from "next/router"
 import data from "./api/data"
-import createTheme from "@mui/material"
 import Profile from "../components/Profile"
 import news from "./api/news"
 import MyCarousel from "../components/MyCarousel"
-export default function Home(props) {
-  const router = useRouter()
-
+export default function Home() {
   return (
     <div>
       <Head>

@@ -1,8 +1,6 @@
 import Head from "next/head"
-import { Typography, Grid, Card, CardContent, CardMedia, CardActionArea } from "@mui/material"
-import { Container } from "@mui/system"
+import { Grid } from "@mui/material"
 import React from "react"
-import classes from "../styles/Home.module.css"
 import data from "./api/data"
 import Profile from "../components/Profile"
 export default function people() {

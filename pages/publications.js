@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "next/head"
-import { Typography, Card, CardContent, CardMedia, CardActionArea, Grid, CardActions } from "@mui/material"
+import { Typography } from "@mui/material"
 
 import data from "./api/data"
 const publications = () => {

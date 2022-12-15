@@ -1,7 +1,6 @@
 import React from "react"
 import Carousel from "react-bootstrap/Carousel"
 import { Container, CardMedia } from "@mui/material"
-import Image from "next/image"
 const MyCarousel = () => {
   return (
     <Container sx={{ padding: "16px 0px 0px 0px" }}>
