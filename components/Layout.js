@@ -132,10 +132,12 @@ export default function Layout({ title, description, children }) {
                     component="img"
                     image="/static/images/iiitm_logo.png"
                     alt="IIITM"
+                    onClick={() => router.push("/")}
                     style={{
                       height: "60px",
                       width: "300px",
                       objectFit: "contain",
+                      cursor: "pointer",
                     }}
                   />
                 </div>
