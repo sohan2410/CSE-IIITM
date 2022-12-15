@@ -164,6 +164,7 @@ export default function Layout({ title, description, children }) {
                             margin: "auto 23px",
                             fontFamily: "Prompt",
                             letterSpacing: "1.1px",
+                            color: '#000000'
                           }}
                         >
                           {item.name}
